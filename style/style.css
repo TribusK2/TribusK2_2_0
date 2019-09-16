@@ -1,1 +1,8 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+header img {
+  height: 60px;
+}
+
+header button {
+  border: none !important;
+}
+/*# sourceMappingURL=style.css.map */
