@@ -1,8 +1,26 @@
+header {
+  height: 8vh;
+}
+
 header img {
   height: 60px;
 }
 
 header button {
   border: none !important;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+}
+
+main .beforeSpace {
+  height: 92px;
+}
+
+.afterSpace {
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */
