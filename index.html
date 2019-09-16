@@ -21,7 +21,7 @@
     <script src="cdn/route.js"></script>
     <script src="script/app.js"></script>
 </head>
-<body ng-app=myApp>
+<body ng-app=myApp ng-controller="bodyCtrl">
     <header class="fixed-top">
         <div class="container-fluid mx-0 px-0">
             <div class="row mx-0">
@@ -32,16 +32,16 @@
                     <div class="collapse navbar-collapse justify-content-end pt-4" id="navbarNav">
                         <ul class="navbar-nav text-center ml-4 pl-5">
                             <li class="nav-item active text-capitalize text-secondary">
-                                <a class="nav-link" href="#">start<span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="#!/">start<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item text-capitalize text-secondary">
-                                <a class="nav-link" href="#">oferta</a>
+                                <a class="nav-link" href="#!/offer">oferta</a>
                             </li>
                             <li class="nav-item text-capitalize text-secondary">
-                                <a class="nav-link" href="#">portfolio</a>
+                                <a class="nav-link" href="#!/portfolio">portfolio</a>
                             </li>
                             <li class="nav-item text-capitalize text-secondary">
-                                <a class="nav-link" href="#">kontakt</a>
+                                <a class="nav-link" href="#!/contact">kontakt</a>
                             </li>
                         </ul>
                     </div>
@@ -54,7 +54,7 @@
     </header>
 
     <!-- main view -->
-    <div ng-view></div>
+    <div ng-view class="mainView animate"></div>
     <!-- main view end -->
 
     <!-- space needed to make regular distance afer main display -->
