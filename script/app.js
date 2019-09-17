@@ -44,14 +44,21 @@ myApp.controller('bodyCtrl', ['$scope', '$location', function($scope, $location)
 
     // Toggle icon of menu button
     $scope.toggleIcon = function(){
+        let screenWidth = $(window).width();
         let btnNav = $('.navbar-toggler');
         let bar1 = $('#bar1');
         let bar2 = $('#bar2');
         let bar3 = $('#bar3');
-        if (btnNav.hasClass('collapsed')){
-            bar1.addClass('bar1');
-            bar2.addClass('bar2');
-            bar3.addClass('bar3');
+        if (screenWidth < 576){
+            if (btnNav.hasClass('collapsed')){
+                bar1.addClass('bar1');
+                bar2.addClass('bar2');
+                bar3.addClass('bar3');
+            }else{
+                bar1.removeClass('bar1');
+                bar2.removeClass('bar2');
+                bar3.removeClass('bar3');
+            } 
         }else{
             bar1.removeClass('bar1');
             bar2.removeClass('bar2');
