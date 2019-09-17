@@ -7,6 +7,50 @@ header{
     button{
         border: none !important;
     }
+    .navBarIcon{
+        width: 25px;
+        height: 2px;
+        background-color: $navBase;
+        margin: 6px;
+        border-radius: 1px;
+        transition: all .3s linear;
+    }
+    .bar1{
+        background-color: lighten($navBase, 40%);
+    }
+    .bar2{
+        background-color: $highlightBlue;
+    }
+    .bar3{
+        background-color: lighten($highlightBlue, 30%);
+    }
+    .darkHover, .lightHover, a{
+        transition: transform 0.2s ease-in-out, color .5s linear;
+    }
+    .navbar-light .navbar-nav .active > .nav-link{
+        color: $navBase;
+        transform: scale(1.15) translateY(-1px);
+        &:hover{
+            .darkHover{
+                color: $navBase;
+            }
+            .lightHover{
+                color: $navBase;
+            }
+        }
+    }
+    .navbar-light .navbar-nav .nav-link{
+        color: lighten($navBase, 70%);
+        &:hover{
+            transform: scale(1.15) translateY(-1px);
+            .darkHover{
+                color: lighten($navBase, 50%);
+            }
+            .lightHover{
+                color: lighten($highlightBlue, 0%) ;
+            }
+        }
+    }
 }
 main{
     height: 100vh;

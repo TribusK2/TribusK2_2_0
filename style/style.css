@@ -6,6 +6,66 @@ header button {
   border: none !important;
 }
 
+header .navBarIcon {
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  margin: 6px;
+  border-radius: 1px;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+header .bar1 {
+  background-color: #666666;
+}
+
+header .bar2 {
+  background-color: #07F7F7;
+}
+
+header .bar3 {
+  background-color: #9bfcfc;
+}
+
+header .darkHover, header .lightHover, header a {
+  -webkit-transition: color .5s linear, -webkit-transform 0.2s ease-in-out;
+  transition: color .5s linear, -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, color .5s linear;
+  transition: transform 0.2s ease-in-out, color .5s linear, -webkit-transform 0.2s ease-in-out;
+}
+
+header .navbar-light .navbar-nav .active > .nav-link {
+  color: black;
+  -webkit-transform: scale(1.15) translateY(-1px);
+          transform: scale(1.15) translateY(-1px);
+}
+
+header .navbar-light .navbar-nav .active > .nav-link:hover .darkHover {
+  color: black;
+}
+
+header .navbar-light .navbar-nav .active > .nav-link:hover .lightHover {
+  color: black;
+}
+
+header .navbar-light .navbar-nav .nav-link {
+  color: #b3b3b3;
+}
+
+header .navbar-light .navbar-nav .nav-link:hover {
+  -webkit-transform: scale(1.15) translateY(-1px);
+          transform: scale(1.15) translateY(-1px);
+}
+
+header .navbar-light .navbar-nav .nav-link:hover .darkHover {
+  color: gray;
+}
+
+header .navbar-light .navbar-nav .nav-link:hover .lightHover {
+  color: #07f7f7;
+}
+
 main {
   height: 100vh;
   width: 100%;
