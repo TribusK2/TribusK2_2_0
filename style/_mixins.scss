@@ -1,0 +1,55 @@
+@mixin mQportraitMobile{
+    @media screen and (orientation: portrait) and (max-width: 991px){
+        @content;
+    }
+}
+@mixin mQmobileMedium{ // from Bootstrap sm to Bootstrap md
+    @media screen and (min-width: 576px) and (max-width: 767px){
+        @content;
+    }
+}
+@mixin mQmobileSmall{ // up to Bootstrap sm
+    @media screen and (max-width: 575px){
+        @content;
+    }
+}
+@mixin mQmobileSmallLandscape{ // up to Bootstrap sm (landscape)
+    @media screen and (max-width: 575px) and (orientation: landscape){
+        @content;
+    }
+}
+@mixin mQmobileMediumLandscape{ // from Bootstrap sm to Bootstrap md (landscape)
+    @media screen and (min-width: 576px) and (max-width: 767px) and (orientation: landscape){
+        @content;
+    }
+}
+@mixin mQmobilePanoram{ // up to Bootstrap xl (wide landscape)
+    @media screen and (max-width: 991px) and (min-aspect-ratio: 82/42){
+        @content;
+    }
+}
+@mixin mQmobileXL{ // up to Bootstrap md (wide portrait)
+    @media screen and (max-width: 991px) and (max-aspect-ratio: 42/82){
+        @content;
+    }
+}
+@mixin mQlaptopPortrait150{ // from Bootstrap sm to Bootstrap md (portrait)
+    @media screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait){
+        @content;
+    }
+}
+@mixin mQfullHD{
+    @media screen and (min-width: 1441px){
+        @content;
+    }
+}
+@mixin mQmobileSmallLandscape{ // up to Bootstrap sm (landscape)
+    @media screen and (max-width: 575px) and (orientation: landscape){
+        @content;
+    }
+}
+@mixin mQtabletSmallLandscape{ // from Bootstrap md to Bootstrap lg (landscape)
+    @media screen and (min-width: 768px) and (max-width: 992px) and (orientation: landscape) and (max-aspect-ratio: 82/42){
+        @content;
+    }
+}
