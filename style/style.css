@@ -1,5 +1,25 @@
+header #navbarNav {
+  padding-top: 24px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+header nav {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+header #logoLink {
+  width: 87px;
+  padding: 16px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 header img {
-  max-height: 60px;
+  height: 60px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 header button {
@@ -74,10 +94,16 @@ main {
 
 main .beforeSpace {
   height: 92px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .afterSpace {
   height: 100vh;
+}
+
+footer p {
+  font-size: 0.7rem;
 }
 
 .animate {

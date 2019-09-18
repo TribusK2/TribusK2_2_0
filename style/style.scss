@@ -1,8 +1,21 @@
 @import "variables";
 
 header{
+    #navbarNav{
+        padding-top: 24px;
+        transition: all $transitionHeader;
+    }
+    nav{
+        transition: all $transitionHeader;
+    }
+    #logoLink{
+        width: 87px;
+        padding: 16px;
+        transition: all $transitionHeader;
+    }
     img{
-        max-height: 60px;
+        height: 60px;
+        transition: all $transitionHeader;
     }
     button{
         border: none !important;
@@ -58,11 +71,19 @@ main{
     overflow: hidden;
     .beforeSpace{
         height: 92px;
+        transition: all $transitionHeader;
     }
 }
 .afterSpace{
     height: 100vh;
 }
+
+footer{
+    p{
+        font-size: 0.7rem;
+    }
+}
+
 // Animation between routes
 .animate {
     position: absolute;

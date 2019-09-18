@@ -27,19 +27,45 @@ myApp.config(['$routeProvider', function($routeProvider){
     });
 }]);
 
-myApp.controller('bodyCtrl', ['$scope', '$location', function($scope, $location){
+myApp.controller('bodyCtrl', ['$scope', '$location', '$document', '$window', function($scope, $location, $document, $window){
     
+    // Change header height function 
+    $document.on('scroll', function() {
+        let currentScroll = $window.scrollY;
+        let logo = $('#logo');
+        let navbarNav = $('#navbarNav');
+        let beforeSpace = $('.beforeSpace');
+        let logoLink = $('#logoLink');
+        let nav = $('nav');
+        if (currentScroll > 0){
+            logo.css('height', '38px');
+            logoLink.css('padding', '8px');
+            navbarNav.css('padding-top', '0px');
+            beforeSpace.css('height', '56px');
+            nav.css('padding-top', '8px');
+        } else {
+            logo.css('height', '60px');
+            logoLink.css('padding', '16px');
+            navbarNav.css('padding-top', '24px');
+            beforeSpace.css('height', '92px');
+            nav.css('padding-top', '16px');
+        }
+    });
+
     // Active class changed function
     $scope.isActive = function (viewLocation){
         return viewLocation === $location.path();
     };
-    // "top scroll" function on click nemu items
-    $scope.scrollTop = function(behavior){
+
+    // "Top scroll" function on click nemu items
+    $scope.scrollTop = function(behavior, bool){
         window.scrollTo({
             top: 0,
             behavior: behavior,
         });
-        $scope.toggleIcon();
+        if (bool){
+            $scope.toggleIcon();
+        }
     };
 
     // Toggle icon of menu button
@@ -66,16 +92,16 @@ myApp.controller('bodyCtrl', ['$scope', '$location', function($scope, $location)
         }
     };
 
-    // define height of mainView display when routing <div ng-view>
+    // Define height of mainView display when routing <div ng-view>
     $scope.$on('$viewContentLoaded', function() {
-        // define height when route is changing
+        // Define height when route is changing
         let mainLeaveHeight = parseFloat($('.mainView:eq(0)').css('height'));   // getting height of animated leave route element
         let mainEnterHeight = parseFloat($('.mainView:eq(1)').css('height') ||  // getting height of animated enter route element
             $('.mainView:eq(0)').css('height'));                                // second element is to prevent undefined bug
         let mainViewHeight = Math.max(mainLeaveHeight, mainEnterHeight);        // gettint the maximum height
         $('.afterSpace').css('height', mainViewHeight);                         // seting right value of height
         
-        // define height when route is changed
+        // Define height when route is changed
         let mainView = document.getElementsByClassName('mainView')[0];
         let event = {                                                           // set items to listener
             attributes: true,                                          
@@ -91,7 +117,7 @@ myApp.controller('bodyCtrl', ['$scope', '$location', function($scope, $location)
         observer.observe(mainView, event);                                      // start MutationObserver event
     });
     
-    // define height of mainView display when resizing <div ng-view>
+    // Define height of mainView display when resizing <div ng-view>
     window.addEventListener("resize", function(){
         let mainView = $('.mainView').css('height');
         $('.afterSpace').css('height', mainView);
