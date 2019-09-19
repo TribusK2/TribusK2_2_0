@@ -27,7 +27,7 @@ myApp.config(['$routeProvider', function($routeProvider){
     });
 }]);
 
-myApp.controller('bodyCtrl', ['$scope', '$location', '$document', '$window', function($scope, $location, $document, $window){
+myApp.controller('bodyCtrl', ['$scope', '$location', '$document', '$window', '$timeout', function($scope, $location, $document, $window, $timeout){
     
     // Change header height function 
     $document.on('scroll', function() {
@@ -94,33 +94,36 @@ myApp.controller('bodyCtrl', ['$scope', '$location', '$document', '$window', fun
 
     // Define height of mainView display when routing <div ng-view>
     $scope.$on('$viewContentLoaded', function() {
-        // Define height when route is changing
-        let mainLeaveHeight = parseFloat($('.mainView:eq(0)').css('height'));   // getting height of animated leave route element
-        let mainEnterHeight = parseFloat($('.mainView:eq(1)').css('height') ||  // getting height of animated enter route element
-            $('.mainView:eq(0)').css('height'));                                // second element is to prevent undefined bug
-        let mainViewHeight = Math.max(mainLeaveHeight, mainEnterHeight);        // gettint the maximum height
-        $('.afterSpace').css('height', mainViewHeight);                         // seting right value of height
-        
-        // Define height when route is changed
-        let mainView = document.getElementsByClassName('mainView')[0];
-        let event = {                                                           // set items to listener
-            attributes: true,                                          
-            childList: false,
-            characterData: false
-        };
-        let callback = function(){                                              // set function to call when animation finish
-            if(!mainView.hasAttribute('data-ng-animate')){
-                $('.afterSpace').css('height', mainEnterHeight);
-            } 
-        }
-        let observer = new MutationObserver(callback);                          // set MutationObserver event
-        observer.observe(mainView, event);                                      // start MutationObserver event
+        $timeout(function() {                                                       // ste timeout to run function in next digest cycle, after image css loaded
+            // Define height when route is changing
+            let mainLeaveHeight = parseFloat($('.mainView:eq(0)').css('height'));   // getting height of animated leave route element
+            let mainEnterHeight = parseFloat($('.mainView:eq(1)').css('height') ||  // getting height of animated enter route element
+                $('.mainView:eq(0)').css('height'));                                // second element is to prevent undefined bug
+            
+            let mainViewHeight = Math.max(mainLeaveHeight, mainEnterHeight);        // gettint the maximum height
+            $('.afterSpace').css('height', mainViewHeight);                         // seting right value of height
+            
+            // Define height when route is changed
+            let mainView = document.getElementsByClassName('mainView')[0];
+            // console.log(mainView);
+            let event = {                                                           // set items to listener
+                attributes: true,                                          
+                childList: false,
+                characterData: false
+            };
+            let callback = function(){                                              // set function to call when animation finish
+                let mainViewHeight = $('.mainView').css('height');
+                $('.afterSpace').css('height', mainViewHeight); 
+            }
+            let observer = new MutationObserver(callback);                          // set MutationObserver event
+            observer.observe(mainView, event);                                      // start MutationObserver event
+        },100);                                                                       // setting of timeout miliseconds delay
     });
     
     // Define height of mainView display when resizing <div ng-view>
     window.addEventListener("resize", function(){
-        let mainView = $('.mainView').css('height');
-        $('.afterSpace').css('height', mainView);
+        let mainViewHeight = $('.mainView').css('height');
+        $('.afterSpace').css('height', mainViewHeight);
     });
 
 }]);

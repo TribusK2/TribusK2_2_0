@@ -98,6 +98,11 @@ main .beforeSpace {
   transition: all 0.5s;
 }
 
+.scrolledView {
+  overflow: visible;
+  height: 100%;
+}
+
 .hedersWrapper {
   position: absolute;
   width: 100%;
@@ -333,8 +338,8 @@ main .beforeSpace {
 
 .mainImage {
   width: 100%;
-  height: 87vh;
-  background-image: url(../img/mainDisplay2.jpg);
+  height: 85vh;
+  background-image: url(../img/mainDisplay.jpg);
   background-position-x: center;
   background-position-y: top;
   background-repeat: no-repeat;
@@ -393,8 +398,9 @@ main .beforeSpace {
   border-top: 3px solid #07F7F7;
 }
 
-.afterSpace {
-  height: 100vh;
+.offerBox {
+  border-top: 5px solid #707070;
+  border-bottom: 5px solid #707070;
 }
 
 footer p {
