@@ -3,7 +3,7 @@
     <div class="beforeSpace"></div>
 
     <section class="bg-white m-0 p-0">
-        <div class="offerDisplay row m-4">
+        <div class="offerDisplay row mx-4">
             <div ng-repeat="banner in banners" class="col-12 col-md-4 mx-0 px-0">
                 <div class="bannerImg p-3 mt-1">
                     <img ng-src="./img/{{banner.file_name}}" class="img-fluid" alt="banner.alt">
@@ -29,9 +29,11 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <h3 class="text-white h4 text-uppercase text-center pt-4">{{banner.title}}</h2>
-                    <p class="text-justify">{{banner.description}}</p>
-                    <p class="text-justify">{{banner.description}}</p>
-                    <p class="text-justify">{{banner.description}}</p>
+                    <div class="bannerText">
+                        <p class="text-justify">{{banner.description}}</p>
+                        <p class="text-justify">{{banner.description}}</p>
+                        <p class="text-justify">{{banner.description}}</p>
+                    </div>
                 </div>
             </div>
         </div>

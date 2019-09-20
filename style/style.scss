@@ -350,15 +350,19 @@ main{
     color: darken($highlightBlue, 8%);
     transition: all 1s;
     position: absolute;
+    overflow: hidden;
     bottom: 3%;
     height: 0px;
     width: 98%;
-    overflow: scroll;
-    scrollbar-width: none;
     left: 0; 
     right: 0; 
     margin-left: auto; 
     margin-right: auto;
+}
+.bannerText{
+    height: 100%;
+    overflow: scroll;
+    scrollbar-width: none;
     &::-webkit-scrollbar {
         display: none;
     }

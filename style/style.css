@@ -488,18 +488,23 @@ main .beforeSpace {
   -webkit-transition: all 1s;
   transition: all 1s;
   position: absolute;
+  overflow: hidden;
   bottom: 3%;
   height: 0px;
   width: 98%;
-  overflow: scroll;
-  scrollbar-width: none;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
 }
 
-.bannerMore::-webkit-scrollbar {
+.bannerText {
+  height: 100%;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.bannerText::-webkit-scrollbar {
   display: none;
 }
 
