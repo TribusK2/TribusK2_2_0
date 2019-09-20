@@ -161,10 +161,15 @@ myApp.controller('offerCtrl', ['$scope', '$http', '$window', function($scope, $h
         }
     });
 
-    // 
-    $scope.bannerMore = function(){
-        let thisBanner = $('.bannerMore');
-        console.log(thisBanner);
-        thisBanner.css('height', '100%');
+    // Open banner
+    $scope.openBanner = function(index){
+        let thisBanner = $('.bannerMore')[index];
+        thisBanner.style.height = '94%';
+    }
+
+    // Close banner
+    $scope.closeBanner = function(index){
+        let thisBanner = $('.bannerMore')[index];
+        thisBanner.style.height = '0%';
     }
 }]);
