@@ -9,7 +9,7 @@ myApp.config(['$routeProvider', function($routeProvider){
     )
     .when("/offer", {
         templateUrl : "../views/offer.html",
-        // controller : "offerCtrl"
+        controller : "offerCtrl"
         }
     )
     .when("/portfolio", {
@@ -134,9 +134,37 @@ myApp.controller('bodyCtrl', ['$scope', '$location', '$document', '$window', '$t
 //     });
 // }]);
 
-// myApp.controller('offerCtrl', ['$scope', function($scope){
-//     $scope.$on('$viewContentLoaded', function() {
-//         let mainViewHeight = $('#mainView').css('height');
-//         console.log(mainViewHeight);
-//     });
-// }]);
+myApp.controller('offerCtrl', ['$scope', '$http', '$window', function($scope, $http, $window){
+    
+    // getting data from json file
+    $http.get('./data/offer.json').then(function(response){
+        $scope.banners = response.data;
+    });
+
+    // Define rules of class bannerBackgroundLeft and bannerBackgroundRight display when route loading
+    $scope.$on('$viewContentLoaded', function() {
+        let screenWidth = $window.innerWidth;
+        if(screenWidth >= 768){
+            $scope.visible = false;
+        }else{
+            $scope.visible = true;
+        }
+    });
+
+    // Define rules of class bannerBackgroundLeft and bannerBackgroundRight display when resizing
+    window.addEventListener("resize", function(){
+        let screenWidth = $window.innerWidth;
+        if(screenWidth >= 768){
+            $scope.$apply($scope.visible = false);
+        }else{
+            $scope.$apply($scope.visible = true);
+        }
+    });
+
+    // 
+    $scope.bannerMore = function(){
+        let thisBanner = $('.bannerMore');
+        console.log(thisBanner);
+        thisBanner.css('height', '100%');
+    }
+}]);
