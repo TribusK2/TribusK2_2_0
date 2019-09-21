@@ -372,6 +372,17 @@ main{
     opacity: 1;
     text-shadow: 0 1px 0 $highlightBlue;
 }
+.offerSlogan{
+    border-top: $borderSloganBox;
+    border-bottom: $borderSloganBox;
+    background-image: url(../img/offer_background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    h1{
+        text-shadow: 5px 5px 10px black;
+    }
+}
 // offer page end
 
 footer{

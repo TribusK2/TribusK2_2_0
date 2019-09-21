@@ -514,6 +514,19 @@ main .beforeSpace {
   text-shadow: 0 1px 0 #07F7F7;
 }
 
+.offerSlogan {
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  background-image: url(../img/offer_background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.offerSlogan h1 {
+  text-shadow: 5px 5px 10px black;
+}
+
 footer p {
   font-size: 0.7rem;
 }

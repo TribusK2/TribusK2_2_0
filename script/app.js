@@ -138,7 +138,8 @@ myApp.controller('offerCtrl', ['$scope', '$http', '$window', function($scope, $h
     
     // getting data from json file
     $http.get('./data/offer.json').then(function(response){
-        $scope.banners = response.data;
+        $scope.banners = response.data.banners;
+        $scope.textes = response.data.textes;
     });
 
     // Define rules of class bannerBackgroundLeft and bannerBackgroundRight display when route loading
