@@ -173,4 +173,23 @@ myApp.controller('offerCtrl', ['$scope', '$http', '$window', function($scope, $h
         let thisBanner = $('.bannerMore')[index];
         thisBanner.style.height = '0%';
     }
+
+    // Navigation arrow Up
+    $scope.scrollBtn = function(pos){
+        let currScroll = window.scrollY;
+        let windowHeight = window.innerHeight - 100;
+        if(pos == 'up'){
+            window.scrollTo({
+                top: currScroll - windowHeight,
+                behavior: "smooth",
+            });
+        }else if(pos == 'down'){
+            window.scrollTo({
+                top: currScroll + windowHeight,
+                behavior: "smooth",
+            });
+        }
+        console.log(windowHeight);
+        
+    }
 }]);
