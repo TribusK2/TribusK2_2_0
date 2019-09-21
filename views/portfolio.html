@@ -1,15 +1,36 @@
-<main>
+<main class="scrolledView">
     <!-- space needed to make regular distance before main display -->
     <div class="beforeSpace"></div>
 
-    <section class="bg-dark text-warning">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi neque eos in quas earum nam ipsam a reiciendis? Labore hic voluptas rerum architecto necessitatibus voluptatem dolorem vitae ducimus itaque perferendis.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi neque eos in quas earum nam ipsam a reiciendis? Labore hic voluptas rerum architecto necessitatibus voluptatem dolorem vitae ducimus itaque perferendis.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi neque eos in quas earum nam ipsam a reiciendis? Labore hic voluptas rerum architecto necessitatibus voluptatem dolorem vitae ducimus itaque perferendis.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi neque eos in quas earum nam ipsam a reiciendis? Labore hic voluptas rerum architecto necessitatibus voluptatem dolorem vitae ducimus itaque perferendis.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi neque eos in quas earum nam ipsam a reiciendis? Labore hic voluptas rerum architecto necessitatibus voluptatem dolorem vitae ducimus itaque perferendis.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi neque eos in quas earum nam ipsam a reiciendis? Labore hic voluptas rerum architecto necessitatibus voluptatem dolorem vitae ducimus itaque perferendis.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi neque eos in quas earum nam ipsam a reiciendis? Labore hic voluptas rerum architecto necessitatibus voluptatem dolorem vitae ducimus itaque perferendis.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi neque eos in quas earum nam ipsam a reiciendis? Labore hic voluptas rerum architecto necessitatibus voluptatem dolorem vitae ducimus itaque perferendis.</p>
+    <section class="mx-0">
+        <div class="row bg-white text-secondary mx-4">
+            <div class="col">
+                <h1 class="text-uppercase">{{textes.title_a}}<span class="biggerLetter">{{textes.title_b}}</span>{{textes.title_c}}<span class="smallerLeter">{{textes.title_d}}</span></h1>
+            </div>
+        </div>
+        <div class="row portfolioBox mx-0">
+            <div class="col-12 col-lg-6">
+                <div class="row px-2" ng-repeat="project in projects">
+                    <div class="col-12 col-md-6 py-4 pr-3 pr-md-2 justify-content-center">
+                        <div class="realisationBox bg-light">
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 py-4 pl-3 pl-md-2 justify-content-center">
+                        <div class="realisationBox bg-light">
+
+                        </div>
+                    </div>
+                </div>                         
+            </div>
+            <div class="col-12 col-lg-6 mx-0 my-5 py-5 order-first order-lg-last">
+                <div class="realisationExample col d-flex align-items-center justify-content-center">
+                    <div class="text-light text-uppercase display-4 py-4 py-lg-0">{{textes.header1}}</div>
+                </div>
+                <div class="realisationExample col d-flex align-items-center justify-content-center">
+                    <div class="text-light text-uppercase display-2 py-4 py-lg-0 font-weight-normal">{{textes.header2}}</div>
+                </div>
+            </div>
+        </div>
     </section>
 </main>

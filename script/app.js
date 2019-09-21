@@ -14,7 +14,7 @@ myApp.config(['$routeProvider', function($routeProvider){
     )
     .when("/portfolio", {
         templateUrl : "../views/portfolio.html",
-        // controller : "portfolioCtrl"
+        controller : "portfolioCtrl"
         }
     )
     .when("/contact", {
@@ -91,7 +91,7 @@ myApp.controller('bodyCtrl', ['$scope', '$location', '$document', '$window', '$t
             bar3.removeClass('bar3');
         }
     };
-
+    
     // Define height of mainView display when routing <div ng-view>
     $scope.$on('$viewContentLoaded', function() {
         $timeout(function() {                                                       // ste timeout to run function in next digest cycle, after image css loaded
@@ -101,38 +101,42 @@ myApp.controller('bodyCtrl', ['$scope', '$location', '$document', '$window', '$t
                 $('.mainView:eq(0)').css('height'));                                // second element is to prevent undefined bug
             
             let mainViewHeight = Math.max(mainLeaveHeight, mainEnterHeight);        // gettint the maximum height
-            $('.afterSpace').css('height', mainViewHeight);                         // seting right value of height
-            
+            $('.afterSpace').css('height', mainViewHeight + "px");                  // seting right value of height
+                      
             // Define height when route is changed
             let mainView = document.getElementsByClassName('mainView')[0];
-            // console.log(mainView);
             let event = {                                                           // set items to listener
                 attributes: true,                                          
                 childList: false,
                 characterData: false
             };
             let callback = function(){                                              // set function to call when animation finish
-                let mainViewHeight = $('.mainView').css('height');
-                $('.afterSpace').css('height', mainViewHeight); 
+                let mainViewHeight = parseFloat($('.mainView').css('height'));
+                $('.afterSpace').css('height', mainViewHeight + "px");
             }
             let observer = new MutationObserver(callback);                          // set MutationObserver event
             observer.observe(mainView, event);                                      // start MutationObserver event
-        },100);                                                                       // setting of timeout miliseconds delay
+        },1);                                                                     // setting of timeout miliseconds delay
     });
     
-    // Define height of mainView display when resizing <div ng-view>
+    // Define "mainViewHeight" change function
+    let mainHeighFunction = function(){
+        let mainViewHeight = parseFloat($('.mainView').css('height'));
+        $('.afterSpace').css('height', mainViewHeight + "px");
+    }
+    // Define event to seting mainViewHeight
     window.addEventListener("resize", function(){
-        let mainViewHeight = $('.mainView').css('height');
-        $('.afterSpace').css('height', mainViewHeight);
+        $timeout(function(){
+            mainHeighFunction();
+        },1);
+    });
+    window.addEventListener("scroll", function(){
+        $timeout(function(){
+            mainHeighFunction();
+        },500);
     });
 
 }]);
-// myApp.controller('startCtrl', ['$scope', function($scope){
-//     $scope.$on('$viewContentLoaded', function() {
-//         let mainViewHeight = $('#mainView').css('height');
-//         console.log(mainViewHeight);
-//     });
-// }]);
 
 myApp.controller('offerCtrl', ['$scope', '$http', '$window', function($scope, $http, $window){
     
@@ -174,7 +178,7 @@ myApp.controller('offerCtrl', ['$scope', '$http', '$window', function($scope, $h
         thisBanner.style.height = '0%';
     }
 
-    // Navigation arrow Up
+    // Navigation arrow
     $scope.scrollBtn = function(pos){
         let currScroll = window.scrollY;
         let windowHeight = window.innerHeight - 100;
@@ -188,8 +192,49 @@ myApp.controller('offerCtrl', ['$scope', '$http', '$window', function($scope, $h
                 top: currScroll + windowHeight,
                 behavior: "smooth",
             });
-        }
-        console.log(windowHeight);
-        
+        }   
     }
+}]);
+
+myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', function($scope, $http, $window, $timeout){
+
+    // Getting data from json file
+    $http.get('./data/portfolio.json').then(function(response){
+        $scope.projects = response.data.projects;
+        $scope.textes = response.data.textes;
+    });
+
+    // // Define display "scrolledView" class function
+    // let setScrollClass = function(){
+    //     let screenWidth = $window.innerWidth;
+    //     if(screenWidth < 992){
+    //         $scope.isScrolled = true;
+    //     }else{
+    //         $scope.isScrolled = false;
+    //     }
+    // }
+    // // Define event to seting scrolledView
+    // let mainHeighFunction = function(){
+    //     let mainViewHeight = parseFloat($('.mainView').css('height'));
+    //     $('.afterSpace').css('height', mainViewHeight + "px");
+    // }
+    // window.addEventListener("resize", function(){
+    //     $timeout(function() {
+    //         setScrollClass();
+    //         mainHeighFunction();
+    //     },1);
+    // }); 
+    // window.addEventListener("scroll", function(){
+    //     $timeout(function() {
+    //         setScrollClass();
+    //         mainHeighFunction();
+    //     },1);
+    // });
+    // $scope.$on('$viewContentLoaded', function(){
+    //     $timeout(function() {
+    //         setScrollClass();
+    //         mainHeighFunction();
+    //     },1);
+    // });
+
 }]);

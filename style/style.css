@@ -98,6 +98,11 @@ main .beforeSpace {
   transition: all 0.5s;
 }
 
+.afterSpace {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 .scrolledView {
   overflow: visible;
   height: 100%;
@@ -580,6 +585,45 @@ main .beforeSpace {
   top: 21px;
   border: solid #07F7F7;
   border-width: 5px 0 0 5px;
+}
+
+.tech {
+  border-left: 5px solid #07F7F7;
+  border-right: 5px solid #07F7F7;
+  border-bottom: 5px solid #07F7F7;
+  background-color: rgba(7, 247, 247, 0.06);
+}
+
+.tech h1 {
+  font-size: 5rem;
+}
+
+@media screen and (orientation: portrait) and (max-width: 991px) {
+  .tech h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.biggerLetter {
+  font-size: 3.5rem;
+}
+
+.smallerLeter {
+  font-size: 1.8rem;
+}
+
+.portfolioBox {
+  background-color: black;
+  border: 5px solid #06cfcf;
+  min-height: 65vh;
+}
+
+.realisationBox {
+  height: 100px;
+}
+
+.realisationExample {
+  height: 50%;
 }
 
 footer p {

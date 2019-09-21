@@ -75,6 +75,9 @@ main{
         transition: all $transitionHeader;
     }
 }
+.afterSpace{
+    transition: all $transitionHeader;
+}
 .scrolledView{
     overflow: visible;
     height: 100%;
@@ -435,7 +438,39 @@ main{
         }
     }
 }
+.tech{
+    border-left: $borderSloganBoxBlue;
+    border-right: $borderSloganBoxBlue;
+    border-bottom: $borderSloganBoxBlue;
+    background-color: $highlightBlueSemi;
+    h1{
+        font-size: 5rem;
+        @include mQportraitMobile{
+            font-size: 2.5rem;
+        }
+    }
+}
 // offer page end
+
+// portfolio page
+.biggerLetter{
+    font-size: 3.5rem;
+}
+.smallerLeter{
+    font-size: 1.8rem;
+}
+.portfolioBox{
+    background-color: $navBase;
+    border: $borderBoxBlueDarken;
+    min-height: 65vh;
+}
+.realisationBox{
+    height: 100px;
+}
+.realisationExample{
+    height: 50%;
+}
+// portfolio page end
 
 footer{
     p{
