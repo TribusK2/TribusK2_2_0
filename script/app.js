@@ -204,6 +204,25 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
         $scope.textes = response.data.textes;
     });
 
+    // Set function to change main display to scrollable or not
+    let isScroll = function(){
+        let main = $('main');
+        let screenWidth = $window.innerWidth;
+        if(screenWidth < 992){
+            main.addClass('scrolledView');
+        }else{
+            main.removeClass('scrolledView');
+        }
+    }
+
+    $scope.$on('$viewContentLoaded', function() {
+        isScroll();
+    });
+
+    window.addEventListener("resize", function(){
+        isScroll();
+    });
+
     // // Define display "scrolledView" class function
     // let setScrollClass = function(){
     //     let screenWidth = $window.innerWidth;
