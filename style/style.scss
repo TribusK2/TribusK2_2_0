@@ -462,13 +462,23 @@ main{
 .portfolioBox{
     background-color: $navBase;
     border: $borderBoxBlueDarken;
-    min-height: 65vh;
+    height: 60vh;
+}
+.realisationBoxWrapper{
+    height: 100%;
 }
 .realisationBox{
-    height: 150px;
+    img{
+        max-height: 15vh;
+    }
+    
 }
 .realisationExample{
     height: 50%;
+}
+.realisationHeader{
+    margin-top: 2vh;
+    font-size: 8vh;
 }
 // portfolio page end
 

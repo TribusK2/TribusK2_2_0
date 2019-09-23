@@ -615,15 +615,24 @@ main .beforeSpace {
 .portfolioBox {
   background-color: black;
   border: 5px solid #06cfcf;
-  min-height: 65vh;
+  height: 60vh;
 }
 
-.realisationBox {
-  height: 150px;
+.realisationBoxWrapper {
+  height: 100%;
+}
+
+.realisationBox img {
+  max-height: 15vh;
 }
 
 .realisationExample {
   height: 50%;
+}
+
+.realisationHeader {
+  margin-top: 2vh;
+  font-size: 8vh;
 }
 
 footer p {
