@@ -701,10 +701,37 @@ main .beforeSpace {
 }
 
 .presentRealisation .close {
+  position: absolute;
   color: black;
   opacity: 1;
-  padding-right: 10px;
+  right: 10px;
   text-shadow: 0 1px 0 #07F7F7;
+  z-index: 1;
+}
+
+.presentRealisation .coloredText {
+  color: #06cfcf;
+}
+
+.presentRealisation .descriptionWrapper {
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.presentRealisation .descriptionWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.presentRealisation p {
+  text-indent: 1rem;
+}
+
+.presentRealisation .imgWrapper {
+  max-height: 90%;
+}
+
+.presentRealisation .imgWrapper img {
+  max-height: 100%;
 }
 
 .realisationExample {

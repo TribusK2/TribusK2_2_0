@@ -215,12 +215,24 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
         }
     }
 
+    // Set height of descriptionWrapper
+    let desWrapperHeight = function(){
+        let headerWrapperHeight = parseFloat($('.headerWrapper').css('height'));
+        let descriptionWrapper = $('.descriptionWrapper');
+        let presentRealisationHeight = parseFloat($('.presentRealisation').css('height'));
+        let descriptionWrapperHeight = presentRealisationHeight - headerWrapperHeight;
+        descriptionWrapper.css('height', descriptionWrapperHeight+'px');
+    }
+
+    // Set function to run on events
     $scope.$on('$viewContentLoaded', function() {
         isScroll();
+        desWrapperHeight();
     });
 
     window.addEventListener("resize", function(){
         isScroll();
+        desWrapperHeight();
     });
 
     // Animate function to change arrow button
@@ -232,6 +244,7 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
         }else{
             change.css('transform', 'rotateY(0deg)');
         }
+        $scope.closeRealisation();
     }
 
     // Display direct realisation
@@ -248,6 +261,7 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
         });
     }
 
+    // Close display direct realisation
     $scope.closeRealisation = function(){
         let presentRealisation = $('.presentRealisation');
         let realisationExample = $('.realisationExample');

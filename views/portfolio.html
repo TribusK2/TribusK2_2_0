@@ -10,16 +10,20 @@
         </div>
         <div class="row">
             <div class="col-12 row portfolioBox mx-0">
+                <!-- List of projects -->
                 <div class="col-12 realisationBoxWrapper col-lg-6 d-flex flex-wrap justify-content-center align-self-start pt-2">
+                    <!-- Realisation boxes -->
                     <div ng-repeat="project in projects" class="col-12 col-md-6 p-0 px-sm-5 py-lg-2 px-lg-5 justify-content-center align-self-center">
                         <div class="realisationBox bg-light text-center" ng-click="displayRealisation()">
                             <div class="col pt-2">
                                 <img ng-src="./img/{{project.file_name}}" class="img-fluid" alt="{{project.alt}}">
                             </div>
-                            
                             <h3 class="h4 col text-dark m-0 pb-1">{{project.title}}</h3>
                         </div>
                     </div>
+                    <!-- Realisation boxes end -->
+                    
+                    <!-- Arrows buttons -->
                     <div class="row m-2 p-1 align-items-center">
                         <div class="changeWrapper row align-items-center">
                             <button class="arrowLeftButton btn btn-outline-light shadow-none align-items-center" ng-click="changeArrow()">
@@ -35,26 +39,66 @@
                             </button>
                         </div>
                     </div>
+                    <!-- Arrows buttons end -->
                 </div>
+                <!-- List of projects end-->
 
+                <!-- Current project display -->
                 <div class="realisationBoxWrapper col-12 col-lg-6 mx-0 py-5 order-first order-lg-last">
+                    <!-- Display box -->
                     <div class="presentRealisation bg-white border">
                         <button type="button" class="close btn shadow-none" ng-click="closeRealisation()" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
+                        <!-- Header -->
+                        <div class="headerWrapper row mx-auto">                   
+                            <div class="row col-12 mx-0 px-0">
+                                <div class="col text-uppercase">
+                                    <h5>Firma: <span class="coloredText">Darex</span></h4>
+                                </div>
+                                <div class="col text-uppercase pr-5">
+                                    <h5>Branża: <span class="coloredText">Suwnice</span></h4>
+                                </div>
+                            </div>
+                            <div class="row mx-0">
+                                <div class="col text-uppercase">
+                                    <h6 class="font-weight-light"><span class="coloredText">Strona: </span><a href="https://www.darexserwis.com" class="text-dark" target="_blank">www.darexserwis.com</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Header end-->
+
+                        <!-- Content -->
+                        <div class="descriptionWrapper row mx-0 py-2">
+                            <div class="imgWrapper col-12 px-5 text-center">
+                                <img src="./img/offer1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col">
+                                <h6 class="font-weight-light coloredText my-2">Zakres prac:</h4>
+                                <p class="text-dark text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur perferendis rem doloremque voluptas quis numquam ipsa similique repudiandae voluptate beatae facere architecto quam adipisci itaque, sunt, corporis minus aliquid saepe?</p>
+                            </div>
+                        </div>
+                        <!-- Content end -->
                     </div>
-                    
+                    <!-- Display box -->
+
+                    <!-- Slogan -->
                     <div class="realisationExample col pb-3 d-flex align-items-center justify-content-center">
                         <div class="text-light text-uppercase display-4 py-4 py-lg-0">{{textes.header1}}</div>
                     </div>
                     <div class="realisationExample col pb-4 d-flex align-items-center justify-content-center">
                         <div class="text-light text-uppercase display-2 py-4 py-lg-0 font-weight-normal">{{textes.header2}}</div>
                     </div>
+                    <!-- Slogan end -->
                 </div>
+                <!-- Current project display end -->
             </div>
+
+            <!-- Header -->
             <div class="col-12 row justify-content-center order-first order-lg-last pb-5 mb-5 pb-lg-0 mb-lg-0">
                 <h2 class="realisationHeader display-4 text-center mx-5">Strony internetowe</h2>
             </div>
+            <!-- Header end -->
         </div>
     </section>
 </main>
