@@ -223,6 +223,44 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
         isScroll();
     });
 
+    // Animate function to change arrow button
+    $scope.changeArrow = function(){
+        let change = $('.changeWrapper');
+        let changeRotateY = change.css('transform');
+        if(changeRotateY == 'matrix(1, 0, 0, 1, 0, 0)'){
+            change.css('transform', 'rotateY(360deg)');
+        }else{
+            change.css('transform', 'rotateY(0deg)');
+        }
+    }
+
+    // Display direct realisation
+    $scope.displayRealisation = function(){
+        let presentRealisation = $('.presentRealisation');
+        let realisationExample = $('.realisationExample');
+        presentRealisation.css({
+            'opacity': '1',
+            'top': '-80px'
+        });
+        realisationExample.css({
+            'height': '20%',
+            'top': '70%'
+        });
+    }
+
+    $scope.closeRealisation = function(){
+        let presentRealisation = $('.presentRealisation');
+        let realisationExample = $('.realisationExample');
+        presentRealisation.css({
+            'opacity': '0',
+            'top': '-170px'
+        });
+        realisationExample.css({
+            'height': '50%',
+            'top': '0%'
+        });
+    }
+
     // // Define display "scrolledView" class function
     // let setScrollClass = function(){
     //     let screenWidth = $window.innerWidth;

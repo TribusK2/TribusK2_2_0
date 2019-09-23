@@ -421,7 +421,6 @@ main{
     @extend .arrowDownButton;
     transform: translateY(-60px);
     border-top: none;
-    // border-bottom: 1px solid darken($highlightBlue, 8%);
     .arrowUpWrapper{
         @extend .arrowDownWrapper;
     }
@@ -466,15 +465,90 @@ main{
 }
 .realisationBoxWrapper{
     height: 100%;
+    .changeBonding{
+        margin: 2px;
+        height: 15px;
+        width: 50px;
+    }
+}
+.changeWrapper{
+    transform: rotateY(0deg);
+    transition: all .5s;
+    
+}
+.arrowLeftButton{
+    transition: all .25s ease-in-out;
+    padding: 5px;
+    transform: rotateZ(90deg);
+    .arrowLeftWrapper{
+        width: 20px;
+        height: 25px;
+        position: relative;
+        overflow: hidden;
+    }
+    .arrowLeft{
+        box-shadow: -6px -6px 20px white;
+        position: absolute;
+        top: -10px;
+        left: 0px;
+        height: 20px;
+        width: 20px;
+        border: solid lighten($navBase, 0%);
+        border-width: 5px 0 0 5px;
+        display: inline-block;
+        transform: rotateZ(-135deg) skew(-10deg, -10deg);
+        transition: all .25s ease-in-out;
+    }
+    &:hover{
+        .arrowLeft{
+            top: 0px;
+            border: solid $highlightBlue;
+            border-width: 5px 0 0 5px;
+        }
+    }
+}
+.arrowRightButton{
+    transform: rotateZ(-90deg);
+    @extend .arrowLeftButton;
+    .arrowRightWrapper{
+        @extend .arrowLeftWrapper;
+    }
+    .arrowRight{
+        @extend .arrowLeft;
+    }
 }
 .realisationBox{
+    cursor: pointer;
     img{
         max-height: 15vh;
     }
-    
+}
+.presentRealisation{
+    transition: all 1s;
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    // opacity: 1;
+    top: -170px;
+    // top: -80px;
+    .close {
+        color: black; 
+        opacity: 1;
+        padding-right: 10px;
+        text-shadow: 0 1px 0 $highlightBlue;
+    }
 }
 .realisationExample{
+    transition: all 1s;
     height: 50%;
+    // height: 20%;
+    top: 0%;
+    // top: 70%;
 }
 .realisationHeader{
     margin-top: 2vh;

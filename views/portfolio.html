@@ -12,7 +12,7 @@
             <div class="col-12 row portfolioBox mx-0">
                 <div class="col-12 realisationBoxWrapper col-lg-6 d-flex flex-wrap justify-content-center align-self-start pt-2">
                     <div ng-repeat="project in projects" class="col-12 col-md-6 p-0 px-sm-5 py-lg-2 px-lg-5 justify-content-center align-self-center">
-                        <div class="realisationBox bg-light text-center">
+                        <div class="realisationBox bg-light text-center" ng-click="displayRealisation()">
                             <div class="col pt-2">
                                 <img ng-src="./img/{{project.file_name}}" class="img-fluid" alt="{{project.alt}}">
                             </div>
@@ -21,24 +21,38 @@
                         </div>
                     </div>
                     <div class="row m-2 p-1 align-items-center">
-                        <!-- <button>
-
-                        </button> -->
-                        <div class="col-12">
-                            <div class="text-light">Arrrrrrrrrrrrrrrrrrrrrrrrr</div>
+                        <div class="changeWrapper row align-items-center">
+                            <button class="arrowLeftButton btn btn-outline-light shadow-none align-items-center" ng-click="changeArrow()">
+                                <div class="arrowLeftWrapper mx-auto">
+                                    <i class="arrowLeft"></i>
+                                </div>
+                            </button>
+                            <div class="changeBonding"></div>
+                            <button class="arrowRightButton btn btn-outline-light shadow-none align-items-center" ng-click="changeArrow()">
+                                <div class="arrowRightWrapper mx-auto">
+                                    <i class="arrowRight"></i>
+                                </div>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6 mx-0 my-5 py-5 order-first order-lg-last">
-                    <div class="realisationExample col d-flex align-items-center justify-content-center">
+
+                <div class="realisationBoxWrapper col-12 col-lg-6 mx-0 py-5 order-first order-lg-last">
+                    <div class="presentRealisation bg-white border">
+                        <button type="button" class="close btn shadow-none" ng-click="closeRealisation()" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    
+                    <div class="realisationExample col pb-3 d-flex align-items-center justify-content-center">
                         <div class="text-light text-uppercase display-4 py-4 py-lg-0">{{textes.header1}}</div>
                     </div>
-                    <div class="realisationExample col d-flex align-items-center justify-content-center">
+                    <div class="realisationExample col pb-4 d-flex align-items-center justify-content-center">
                         <div class="text-light text-uppercase display-2 py-4 py-lg-0 font-weight-normal">{{textes.header2}}</div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 row justify-content-center order-first order-lg-last">
+            <div class="col-12 row justify-content-center order-first order-lg-last pb-5 mb-5 pb-lg-0 mb-lg-0">
                 <h2 class="realisationHeader display-4 text-center mx-5">Strony internetowe</h2>
             </div>
         </div>
