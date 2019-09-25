@@ -471,11 +471,13 @@ main{
         width: 50px;
     }
 }
-.changeWrapper{
-    transform: rotateY(0deg);
-    transition: all .5s;
-    
+.changeWrapper3d{
+    perspective: 170px;
+    .changeWrapper{
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
 }
+
 .arrowLeftButton{
     transition: all .25s ease-in-out;
     padding: 5px;
@@ -519,8 +521,23 @@ main{
 }
 .realisationBox{
     cursor: pointer;
+    .flipWrapper{
+        perspective: 300px;
+    }
     img{
         max-height: 15vh;
+        transform: rotateX(20deg);
+        transform-origin: 0% 150%;
+        transition: all .5s;
+        border: 5px solid $navBase;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.829);
+    }
+    &:hover{
+        img{
+            transform: rotateX(0deg);
+            box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.527);
+        }
     }
 }
 .presentRealisation{

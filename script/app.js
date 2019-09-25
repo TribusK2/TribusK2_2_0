@@ -236,13 +236,44 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
     });
 
     // Animate function to change arrow button
-    $scope.changeArrow = function(){
+    $scope.changeArrow = function(direction){
         let change = $('.changeWrapper');
-        let changeRotateY = change.css('transform');
-        if(changeRotateY == 'matrix(1, 0, 0, 1, 0, 0)'){
-            change.css('transform', 'rotateY(360deg)');
-        }else{
-            change.css('transform', 'rotateY(0deg)');
+        // let current = change.css('transform');
+        // console.log(current);
+        let a1 = -1;
+        let b1 = 0;
+        let speed = 0.05;
+        let interval = 1;
+        if(direction == 'left'){
+            let anim = setInterval(frame, interval);
+            function frame() {
+                if (a1 >= 1) {
+                clearInterval(anim);
+                } else {
+                    if(a1 > 0){
+                       b1 = a1-1; 
+                    }else{
+                        b1 = -1+Math.abs(a1);
+                    }
+                    a1 += speed;
+                    change.css('transform', 'matrix3d('+a1+', 0, '+b1+', 0, 0, 1, 0, 0, 1.22465e-16, 0, '+a1+', 0, 0, 0, 0, 1)');
+                }
+            }
+        }else if(direction == 'right'){
+            let anim = setInterval(frame, interval);
+            function frame() {
+                if (a1 >= 1) {
+                clearInterval(anim);
+                } else {
+                    if(a1 > 0){
+                        b1 = 1-Math.abs(a1);
+                    }else{
+                        b1 = a1+1;
+                    }
+                    a1 += speed;
+                    change.css('transform', 'matrix3d('+a1+', 0, '+b1+', 0, 0, 1, 0, 0, 1.22465e-16, 0, '+a1+', 0, 0, 0, 0, 1)');
+                }
+            }
         }
         $scope.closeRealisation();
     }

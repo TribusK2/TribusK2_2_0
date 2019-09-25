@@ -15,7 +15,7 @@
                     <!-- Realisation boxes -->
                     <div ng-repeat="project in projects" class="col-12 col-md-6 p-0 px-sm-5 py-lg-2 px-lg-5 justify-content-center align-self-center">
                         <div class="realisationBox bg-light text-center" ng-click="displayRealisation()">
-                            <div class="col pt-2">
+                            <div class="flipWrapper col pt-2">
                                 <img ng-src="./img/{{project.file_name}}" class="img-fluid" alt="{{project.alt}}">
                             </div>
                             <h3 class="h4 col text-dark m-0 pb-1">{{project.title}}</h3>
@@ -24,15 +24,15 @@
                     <!-- Realisation boxes end -->
                     
                     <!-- Arrows buttons -->
-                    <div class="row m-2 p-1 align-items-center">
+                    <div class="row changeWrapper3d m-2 p-1 align-items-center">
                         <div class="changeWrapper row align-items-center">
-                            <button class="arrowLeftButton btn btn-outline-light shadow-none align-items-center" ng-click="changeArrow()">
+                            <button class="arrowLeftButton btn btn-outline-light shadow-none align-items-center" ng-click="changeArrow('left')">
                                 <div class="arrowLeftWrapper mx-auto">
                                     <i class="arrowLeft"></i>
                                 </div>
                             </button>
                             <div class="changeBonding"></div>
-                            <button class="arrowRightButton btn btn-outline-light shadow-none align-items-center" ng-click="changeArrow()">
+                            <button class="arrowRightButton btn btn-outline-light shadow-none align-items-center" ng-click="changeArrow('right')">
                                 <div class="arrowRightWrapper mx-auto">
                                     <i class="arrowRight"></i>
                                 </div>
