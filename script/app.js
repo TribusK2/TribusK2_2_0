@@ -202,6 +202,7 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
     $http.get('./data/portfolio.json').then(function(response){
         $scope.projects = response.data.projects;
         $scope.textes = response.data.textes;
+        $scope.proj = $scope.projects.proj1;
     });
 
     // Set function to change main display to scrollable or not
@@ -238,13 +239,33 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
     // Animate function to change arrow button
     $scope.changeArrow = function(direction){
         let change = $('.changeWrapper');
-        // let current = change.css('transform');
-        // console.log(current);
         let a1 = -1;
         let b1 = 0;
-        let speed = 0.05;
+        let speed = 0.04;
         let interval = 1;
+        let num = 1;
+        let currentProj = $scope.proj;
+
+        // Define current display projects
+        switch(currentProj){
+            case $scope.projects.proj1:
+                num = 1;
+                break;
+            case $scope.projects.proj2:
+                num = 2;
+                break;
+            case $scope.projects.proj3:
+                num = 3;
+                break;
+        }
+
+        // Set action to left arrow
         if(direction == 'left'){
+            if(num > 1){
+                num -= 1;
+            }else{
+                num = 3;
+            }
             let anim = setInterval(frame, interval);
             function frame() {
                 if (a1 >= 1) {
@@ -259,7 +280,14 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
                     change.css('transform', 'matrix3d('+a1+', 0, '+b1+', 0, 0, 1, 0, 0, 1.22465e-16, 0, '+a1+', 0, 0, 0, 0, 1)');
                 }
             }
+
+        // Set action to right arrow
         }else if(direction == 'right'){
+            if(num < 3){
+                num += 1;
+            }else{
+                num = 1;
+            }
             let anim = setInterval(frame, interval);
             function frame() {
                 if (a1 >= 1) {
@@ -275,6 +303,23 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
                 }
             }
         }
+
+        // Set new current display
+        switch(num){
+            case 1:
+                $scope.proj = $scope.projects.proj1;
+                break;
+            case 2:
+                $scope.proj = $scope.projects.proj2;
+                break;
+            case 3:
+                $scope.proj = $scope.projects.proj3;
+                break;
+            default:
+                $scope.projects = $scope.projects1;
+        }
+
+        // Close current display box
         $scope.closeRealisation();
     }
 
@@ -290,6 +335,11 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
             'height': '20%',
             'top': '70%'
         });
+        $scope.file_name = this.project.file_name;
+        $scope.title = this.project.title;
+        $scope.industry = this.project.industry;
+        $scope.web = this.project.web;
+        $scope.description = this.project.description;
     }
 
     // Close display direct realisation

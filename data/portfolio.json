@@ -1,29 +1,67 @@
 {
-    "projects":[
-        {
-            "file_name": "offer1.jpg",
-            "alt": "Dwa monitory komputera stojące na blacie biurka",
-            "title": "Darex"
-        },{
-            "file_name": "offer2.jpg",
-            "alt": "Dwa monitory komputera stojące na blacie biurka",
-            "title": "Rywal"
-        },{
-            "file_name": "offer3.jpg",
-            "alt": "Dwa monitory komputera stojące na blacie biurka",
-            "title": "BMK"
-        },{
-            "file_name": "offer1.jpg",
-            "alt": "Smartfon trzymany w ręce",
-            "title": "Puste"
-        }
-    ],
+    "projects":{
+        "proj1":[
+            {
+                "file_name": "offer1.jpg",
+                "alt": "Dwa monitory komputera stojące na blacie biurka",
+                "title": "Darex",
+                "industry": "Suwnice",
+                "web": "www.darexserwis.pl",
+                "description": "Darex Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
+            },{
+                "file_name": "offer2.jpg",
+                "alt": "Dwa monitory komputera stojące na blacie biurka",
+                "title": "Rywal",
+                "industry": "Transport",
+                "web": "www.rywal-transport.pl",
+                "description": "Rywal Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
+            },{
+                "file_name": "offer3.jpg",
+                "alt": "Dwa monitory komputera stojące na blacie biurka",
+                "title": "BMK",
+                "industry": "Suwnice",
+                "web": "www.bmksuwnice.pl",
+                "description": "BMK Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
+            }
+        ],
+        "proj2":[
+            {
+                "file_name": "offer1.jpg",
+                "alt": "Dwa monitory komputera stojące na blacie biurka",
+                "title": "Panello",
+                "industry": "Kinematografia",
+                "web": "www.tribusk2.pl/Golbalbook/Stage2.html",
+                "description": "Globalbook Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
+            },{
+                "file_name": "offer2.jpg",
+                "alt": "Dwa monitory komputera stojące na blacie biurka",
+                "title": "Globalbook",
+                "industry": "Kinematografia",
+                "web": "www.tribusk2.pl/panello.html",
+                "description": "Panel Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
+            }
+        ],
+        "proj3":[
+            {
+                "file_name": "offer1.jpg",
+                "alt": "Dwa monitory komputera stojące na blacie biurka",
+                "title": "API",
+                "industry": "API",
+                "web": "#",
+                "description": "API Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
+            }
+        ]
+    },
     "textes":{
         "title_a": "Nasze re",
         "title_b": "a",
         "title_c": "lizacj",
         "title_d": "e",
         "header1": "Przykładowe",
-        "header2": "Projekty"
+        "header2": "Projekty",
+        "box_title": "Firma",
+        "box_industry": "Branża",
+        "box_web": "Strona",
+        "box_description": "Zakres prac"
     }
 }
