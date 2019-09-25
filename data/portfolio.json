@@ -6,21 +6,24 @@
                 "alt": "Dwa monitory komputera stojące na blacie biurka",
                 "title": "Darex",
                 "industry": "Suwnice",
-                "web": "www.darexserwis.pl",
+                "web1": "www.darexserwis.pl",
+                "web2": "",
                 "description": "Darex Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
             },{
                 "file_name": "offer2.jpg",
                 "alt": "Dwa monitory komputera stojące na blacie biurka",
                 "title": "Rywal",
                 "industry": "Transport",
-                "web": "www.rywal-transport.pl",
+                "web1": "www.rywal-transport.pl",
+                "web2": "",
                 "description": "Rywal Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
             },{
                 "file_name": "offer3.jpg",
                 "alt": "Dwa monitory komputera stojące na blacie biurka",
                 "title": "BMK",
                 "industry": "Suwnice",
-                "web": "www.bmksuwnice.pl",
+                "web1": "www.bmksuwnice.pl",
+                "web2": "",
                 "description": "BMK Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
             }
         ],
@@ -28,16 +31,18 @@
             {
                 "file_name": "offer1.jpg",
                 "alt": "Dwa monitory komputera stojące na blacie biurka",
-                "title": "Panello",
+                "title": "Globalbook",
                 "industry": "Kinematografia",
-                "web": "www.tribusk2.pl/Golbalbook/Stage2.html",
+                "web1": "www.tribusk2.pl/Globalbook/stage1.html",
+                "web2": "www.tribusk2.pl/Globalbook/stage2.html",
                 "description": "Globalbook Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
             },{
                 "file_name": "offer2.jpg",
                 "alt": "Dwa monitory komputera stojące na blacie biurka",
-                "title": "Globalbook",
+                "title": "Panello",
                 "industry": "Kinematografia",
-                "web": "www.tribusk2.pl/panello.html",
+                "web1": "www.tribusk2.pl/panello.html",
+                "web2": "",
                 "description": "Panel Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
             }
         ],
@@ -46,8 +51,9 @@
                 "file_name": "offer1.jpg",
                 "alt": "Dwa monitory komputera stojące na blacie biurka",
                 "title": "API",
-                "industry": "API",
-                "web": "#",
+                "industry": "Finanse",
+                "web1": "",
+                "web2": "",
                 "description": "API Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
             }
         ]
@@ -59,9 +65,14 @@
         "title_d": "e",
         "header1": "Przykładowe",
         "header2": "Projekty",
-        "box_title": "Firma",
+        "box_title": "Projekt",
         "box_industry": "Branża",
         "box_web": "Strona",
-        "box_description": "Zakres prac"
+        "box_description": "Zakres prac",
+        "main_header": [
+            "Strony internetowe",
+            "Scenografia filmowa",
+            "Aplikacje internetowe"
+        ]
     }
 }

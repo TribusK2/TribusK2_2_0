@@ -682,6 +682,8 @@ main .beforeSpace {
 }
 
 .realisationBox {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   cursor: pointer;
 }
 
@@ -691,7 +693,7 @@ main .beforeSpace {
 }
 
 .realisationBox img {
-  max-height: 15vh;
+  max-height: 14vh;
   -webkit-transform: rotateX(20deg);
           transform: rotateX(20deg);
   -webkit-transform-origin: 0% 150%;
@@ -803,5 +805,19 @@ footer p {
 
 .animate.ng-leave-active {
   opacity: 0;
+}
+
+.repeatAnimate {
+  opacity: 1;
+}
+
+.repeatAnimate.ng-enter {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  opacity: 0;
+}
+
+.repeatAnimate.ng-enter-active {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */

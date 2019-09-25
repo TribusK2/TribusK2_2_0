@@ -477,7 +477,6 @@ main{
         transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     }
 }
-
 .arrowLeftButton{
     transition: all .25s ease-in-out;
     padding: 5px;
@@ -520,12 +519,13 @@ main{
     }
 }
 .realisationBox{
+    transition: all 0.3s;
     cursor: pointer;
     .flipWrapper{
         perspective: 300px;
     }
     img{
-        max-height: 15vh;
+        max-height: 14vh;
         transform: rotateX(20deg);
         transform-origin: 0% 150%;
         transition: all .5s;
@@ -624,4 +624,17 @@ footer{
 }
 .animate.ng-leave-active {
     opacity: 0;
+}
+
+// Animation of ng-repeat enter
+.repeatAnimate {
+    opacity: 1;
+}
+.repeatAnimate.ng-enter {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    opacity: 0;
+}
+.repeatAnimate.ng-enter-active {
+    opacity: 1;
 }

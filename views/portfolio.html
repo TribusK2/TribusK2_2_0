@@ -13,7 +13,7 @@
                 <!-- List of projects -->
                 <div class="col-12 realisationBoxWrapper col-lg-6 d-flex flex-wrap justify-content-center align-self-start pt-2">
                     <!-- Realisation boxes -->
-                    <div ng-repeat="project in proj" class="col-12 col-md-6 p-0 px-sm-5 py-lg-2 px-lg-5 justify-content-center align-self-center">
+                    <div ng-repeat="project in proj" class="repeatAnimate col-12 col-md-6 p-0 px-sm-5 py-lg-2 px-lg-5 justify-content-center align-self-center">
                         <div class="realisationBox bg-light text-center" ng-click="displayRealisation()">
                             <div class="flipWrapper col pt-2">
                                 <img ng-src="./img/{{project.file_name}}" class="img-fluid" alt="{{project.alt}}">
@@ -24,21 +24,24 @@
                     <!-- Realisation boxes end -->
                     
                     <!-- Arrows buttons -->
-                    <div class="row col-12 changeWrapper3d m-2 p-1 align-items-center">
-                        <div class="changeWrapper row align-items-center mx-auto">
-                            <button class="arrowLeftButton btn btn-outline-light shadow-none align-items-center" ng-click="changeArrow('left')">
-                                <div class="arrowLeftWrapper mx-auto">
-                                    <i class="arrowLeft"></i>
-                                </div>
-                            </button>
-                            <div class="changeBonding"></div>
-                            <button class="arrowRightButton btn btn-outline-light shadow-none align-items-center" ng-click="changeArrow('right')">
-                                <div class="arrowRightWrapper mx-auto">
-                                    <i class="arrowRight"></i>
-                                </div>
-                            </button>
+                    <div class="row col-12 align-items-end">
+                        <div class="row col-12 changeWrapper3d my-2 p-1 mx-0 align-items-center">
+                            <div class="changeWrapper row align-items-center mx-auto">
+                                <button class="arrowLeftButton btn btn-outline-light shadow-none align-items-center" ng-click="changeArrow('left')">
+                                    <div class="arrowLeftWrapper mx-auto">
+                                        <i class="arrowLeft"></i>
+                                    </div>
+                                </button>
+                                <div class="changeBonding"></div>
+                                <button class="arrowRightButton btn btn-outline-light shadow-none align-items-center" ng-click="changeArrow('right')">
+                                    <div class="arrowRightWrapper mx-auto">
+                                        <i class="arrowRight"></i>
+                                    </div>
+                                </button>
+                            </div>
                         </div>
                     </div>
+                    
                     <!-- Arrows buttons end -->
                 </div>
                 <!-- List of projects end-->
@@ -51,7 +54,7 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <!-- Header -->
-                        <div class="headerWrapper row mx-auto">                   
+                        <div class="headerWrapper row mx-auto pt-1">                   
                             <div class="row col-12 mx-0 px-0">
                                 <div class="col text-uppercase">
                                     <h5>{{textes.box_title}}: <span class="coloredText">{{title}}</span></h4>
@@ -62,7 +65,8 @@
                             </div>
                             <div class="row mx-0">
                                 <div class="col text-uppercase">
-                                    <h6 class="font-weight-light"><span class="coloredText">{{textes.box_web}}: </span><a href="https://{{web}}" class="text-dark" target="_blank">{{web}}</a></h4>
+                                    <h6 class="webPage1 font-weight-light"><span class="coloredText">{{textes.box_web}}: </span><a href="https://{{web1}}" class="text-dark" target="_blank">{{web1}}</a></h4>
+                                    <h6 class="webPage2 font-weight-light"><span class="coloredText">{{textes.box_web}}: </span><a href="https://{{web2}}" class="text-dark" target="_blank">{{web2}}</a></h4>
                                 </div>
                             </div>
                         </div>
@@ -70,8 +74,8 @@
 
                         <!-- Content -->
                         <div class="descriptionWrapper row mx-0 py-2">
-                            <div class="imgWrapper col-12 px-5 text-center">
-                                <img ng-src="./img/{{file_name}}" class="img-fluid" alt="">
+                            <div class="col-12 px-5 text-center">
+                                <img ng-src="./img/{{file_name}}" class="img-fluid imgWrapper" alt="">
                             </div>
                             <div class="col">
                                 <h6 class="font-weight-light coloredText my-2">{{textes.box_description}}:</h4>
@@ -96,7 +100,7 @@
 
             <!-- Header -->
             <div class="col-12 row justify-content-center order-first order-lg-last pb-5 mb-5 pb-lg-0 mb-lg-0">
-                <h2 class="realisationHeader display-4 text-center mx-5">Strony internetowe</h2>
+                <h2 class="realisationHeader display-4 text-center mx-5">{{main_header}}</h2>
             </div>
             <!-- Header end -->
         </div>

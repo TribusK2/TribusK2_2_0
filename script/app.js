@@ -203,6 +203,7 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
         $scope.projects = response.data.projects;
         $scope.textes = response.data.textes;
         $scope.proj = $scope.projects.proj1;
+        $scope.main_header = $scope.textes.main_header['0'];
     });
 
     // Set function to change main display to scrollable or not
@@ -221,7 +222,7 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
         let headerWrapperHeight = parseFloat($('.headerWrapper').css('height'));
         let descriptionWrapper = $('.descriptionWrapper');
         let presentRealisationHeight = parseFloat($('.presentRealisation').css('height'));
-        let descriptionWrapperHeight = presentRealisationHeight - headerWrapperHeight;
+        let descriptionWrapperHeight = presentRealisationHeight - headerWrapperHeight -2;
         descriptionWrapper.css('height', descriptionWrapperHeight+'px');
     }
 
@@ -245,82 +246,87 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
         let interval = 1;
         let num = 1;
         let currentProj = $scope.proj;
-
-        // Define current display projects
-        switch(currentProj){
-            case $scope.projects.proj1:
-                num = 1;
-                break;
-            case $scope.projects.proj2:
-                num = 2;
-                break;
-            case $scope.projects.proj3:
-                num = 3;
-                break;
-        }
-
-        // Set action to left arrow
-        if(direction == 'left'){
-            if(num > 1){
-                num -= 1;
-            }else{
-                num = 3;
+        
+            // Define current display projects
+            switch(currentProj){
+                case $scope.projects.proj1:
+                    num = 1;
+                    break;
+                case $scope.projects.proj2:
+                    num = 2;
+                    break;
+                case $scope.projects.proj3:
+                    num = 3;
+                    break;
             }
-            let anim = setInterval(frame, interval);
-            function frame() {
-                if (a1 >= 1) {
-                clearInterval(anim);
-                } else {
-                    if(a1 > 0){
-                       b1 = a1-1; 
-                    }else{
-                        b1 = -1+Math.abs(a1);
+
+            // Set action to left arrow
+            if(direction == 'left'){
+                if(num > 1){
+                    num -= 1;
+                }else{
+                    num = 3;
+                }
+                let anim = setInterval(frame, interval);
+                function frame() {
+                    if (a1 >= 1) {
+                    clearInterval(anim);
+                    } else {
+                        if(a1 > 0){
+                        b1 = a1-1; 
+                        }else{
+                            b1 = -1+Math.abs(a1);
+                        }
+                        a1 += speed;
+                        change.css('transform', 'matrix3d('+a1+', 0, '+b1+', 0, 0, 1, 0, 0, 1.22465e-16, 0, '+a1+', 0, 0, 0, 0, 1)');
                     }
-                    a1 += speed;
-                    change.css('transform', 'matrix3d('+a1+', 0, '+b1+', 0, 0, 1, 0, 0, 1.22465e-16, 0, '+a1+', 0, 0, 0, 0, 1)');
+                }
+
+            // Set action to right arrow
+            }else if(direction == 'right'){
+                if(num < 3){
+                    num += 1;
+                }else{
+                    num = 1;
+                }
+                let anim = setInterval(frame, interval);
+                function frame() {
+                    if (a1 >= 1) {
+                    clearInterval(anim);
+                    } else {
+                        if(a1 > 0){
+                            b1 = 1-Math.abs(a1);
+                        }else{
+                            b1 = a1+1;
+                        }
+                        a1 += speed;
+                        change.css('transform', 'matrix3d('+a1+', 0, '+b1+', 0, 0, 1, 0, 0, 1.22465e-16, 0, '+a1+', 0, 0, 0, 0, 1)');
+                    }
                 }
             }
 
-        // Set action to right arrow
-        }else if(direction == 'right'){
-            if(num < 3){
-                num += 1;
-            }else{
-                num = 1;
+            // Set new current display
+            switch(num){
+                case 1:
+                    $scope.proj = $scope.projects.proj1;
+                    $scope.main_header = $scope.textes.main_header['0'];
+                    break;
+                case 2:
+                    $scope.proj = $scope.projects.proj2;
+                    $scope.main_header = $scope.textes.main_header['1'];
+                    break;
+                case 3:
+                    $scope.proj = $scope.projects.proj3;
+                    $scope.main_header = $scope.textes.main_header['2'];
+                    break;
+                default:
+                    $scope.projects = $scope.projects1;
+                    $scope.main_header = $scope.textes.main_header['0'];
             }
-            let anim = setInterval(frame, interval);
-            function frame() {
-                if (a1 >= 1) {
-                clearInterval(anim);
-                } else {
-                    if(a1 > 0){
-                        b1 = 1-Math.abs(a1);
-                    }else{
-                        b1 = a1+1;
-                    }
-                    a1 += speed;
-                    change.css('transform', 'matrix3d('+a1+', 0, '+b1+', 0, 0, 1, 0, 0, 1.22465e-16, 0, '+a1+', 0, 0, 0, 0, 1)');
-                }
-            }
-        }
-
-        // Set new current display
-        switch(num){
-            case 1:
-                $scope.proj = $scope.projects.proj1;
-                break;
-            case 2:
-                $scope.proj = $scope.projects.proj2;
-                break;
-            case 3:
-                $scope.proj = $scope.projects.proj3;
-                break;
-            default:
-                $scope.projects = $scope.projects1;
-        }
 
         // Close current display box
         $scope.closeRealisation();
+        desWrapperHeight();
     }
 
     // Display direct realisation
@@ -338,8 +344,22 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
         $scope.file_name = this.project.file_name;
         $scope.title = this.project.title;
         $scope.industry = this.project.industry;
-        $scope.web = this.project.web;
+        $scope.web1 = this.project.web1;
+        if($scope.web1 === ''){
+            $('.webPage1').css({display: 'none'});
+        }else{
+            $('.webPage1').css({display: 'block'});
+        }
+        $scope.web2 = this.project.web2;
+        if($scope.web2 === ''){
+            $('.webPage2').css({display: 'none'});
+        }else{
+            $('.webPage2').css({display: 'block'});
+        }
         $scope.description = this.project.description;
+        $timeout(function(){
+            desWrapperHeight();
+        }, 1);
     }
 
     // Close display direct realisation
