@@ -1,6 +1,15 @@
 @import "variables";
 @import "mixins";
 
+@font-face {
+    font-family: Kalam-Regular;
+    src: url(../fonts/Kalam-Regular.ttf);
+}
+@font-face {
+    font-family: Kalam-Bold;
+    src: url(../fonts/Kalam-Bold.ttf);
+}
+
 header{
     #navbarNav{
         padding-top: 24px;
@@ -674,6 +683,51 @@ main{
     }
 }
 // portfolio page end
+
+// contact page
+.contactHeaderWrapper{
+    font-weight: bold;
+    color: lighten($navBase, 40%);
+    h1{
+        font-size: 4rem;
+    }
+}
+.contactContentWrapper{
+    font-family: Kalam-regular;
+    i{
+        img{
+            height: auto;
+            width: 80px;
+        }
+        
+    }
+}
+.imageContactWrapper{
+    .imageContact{
+        background-image: url(../img/contact.jpg);
+        background-position-x: center;
+        background-position-y: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 80vh;
+        width: 100%;
+        border: 20px solid white;
+    }
+    .dot{
+        height: $dotDiameter;
+        width: $dotDiameter;
+        border-radius: $dotDiameter/2;
+        background-color: $highlightBlue;
+        box-shadow: 5px 5px 10px black;
+        cursor: pointer;
+    }
+    h2{
+        font-family: Kalam-bold;
+        text-shadow: 5px 5px 10px black;
+        cursor: pointer;
+    }
+}
+// contact page end
 
 footer{
     p{

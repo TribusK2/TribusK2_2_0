@@ -19,7 +19,7 @@ myApp.config(['$routeProvider', function($routeProvider){
     )
     .when("/contact", {
         templateUrl : "../views/contact.html",
-        // controller : "contactCtrl"
+        controller : "contactCtrl"
         }
     )
     .otherwise({
@@ -411,38 +411,15 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
             'top': '0%'
         });
     }
+}]);
 
-    // // Define display "scrolledView" class function
-    // let setScrollClass = function(){
-    //     let screenWidth = $window.innerWidth;
-    //     if(screenWidth < 992){
-    //         $scope.isScrolled = true;
-    //     }else{
-    //         $scope.isScrolled = false;
-    //     }
-    // }
-    // // Define event to seting scrolledView
-    // let mainHeighFunction = function(){
-    //     let mainViewHeight = parseFloat($('.mainView').css('height'));
-    //     $('.afterSpace').css('height', mainViewHeight + "px");
-    // }
-    // window.addEventListener("resize", function(){
-    //     $timeout(function() {
-    //         setScrollClass();
-    //         mainHeighFunction();
-    //     },1);
-    // }); 
-    // window.addEventListener("scroll", function(){
-    //     $timeout(function() {
-    //         setScrollClass();
-    //         mainHeighFunction();
-    //     },1);
-    // });
-    // $scope.$on('$viewContentLoaded', function(){
-    //     $timeout(function() {
-    //         setScrollClass();
-    //         mainHeighFunction();
-    //     },1);
-    // });
+myApp.controller('contactCtrl', ['$scope', '$http', function($scope, $http){
+
+    // Getting data from json file
+    $http.get('./data/contact.json').then(function(response){
+        $scope.icons = response.data.icons;
+        $scope.textes = response.data.textes;
+    });
+    
 
 }]);

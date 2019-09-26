@@ -1,0 +1,27 @@
+{
+    "icons":[
+        {
+            "file_name": "mobile.png",
+            "alt": "Ikona telefonu komórkowego",
+            "text": "+48 501-528-589",
+            "title": "Zadzwoń na numer +48 501-528-589",
+            "link": "tel:+48501528589"
+        },{
+            "file_name": "mail.png",
+            "alt": "Ikona koperty",
+            "text": "biuro@tribusk2.pl",
+            "title": "Wyślij maila na adres biuro@tribusk2.pl",
+            "link": "mailto:biuro@tribusk2.pl"
+        },{
+            "file_name": "facebook.png",
+            "alt": "Ikona facebooka",
+            "text": "facebok/tribusk2",
+            "title": "Wejdź na stronę facebooka",
+            "link": "http://"
+        }
+    ],
+    "textes":{
+        "header1": "Kontakt do nas",
+        "header2": "Sprawdź nas"
+    }
+}

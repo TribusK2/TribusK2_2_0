@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Kalam-Regular;
+  src: url(../fonts/Kalam-Regular.ttf);
+}
+
+@font-face {
+  font-family: Kalam-Bold;
+  src: url(../fonts/Kalam-Bold.ttf);
+}
+
 header #navbarNav {
   padding-top: 24px;
   -webkit-transition: all 0.5s;
@@ -901,6 +911,51 @@ main .beforeSpace {
         flex-basis: 100%;
     max-width: 60%;
   }
+}
+
+.contactHeaderWrapper {
+  font-weight: bold;
+  color: #666666;
+}
+
+.contactHeaderWrapper h1 {
+  font-size: 4rem;
+}
+
+.contactContentWrapper {
+  font-family: Kalam-regular;
+}
+
+.contactContentWrapper i img {
+  height: auto;
+  width: 80px;
+}
+
+.imageContactWrapper .imageContact {
+  background-image: url(../img/contact.jpg);
+  background-position-x: center;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  width: 100%;
+  border: 20px solid white;
+}
+
+.imageContactWrapper .dot {
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  background-color: #07F7F7;
+  -webkit-box-shadow: 5px 5px 10px black;
+          box-shadow: 5px 5px 10px black;
+  cursor: pointer;
+}
+
+.imageContactWrapper h2 {
+  font-family: Kalam-bold;
+  text-shadow: 5px 5px 10px black;
+  cursor: pointer;
 }
 
 footer p {
