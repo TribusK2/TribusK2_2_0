@@ -235,7 +235,9 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
 
     window.addEventListener("resize", function(){
         isScroll();
-        desWrapperHeight();
+        $timeout(function(){
+            desWrapperHeight();
+        },1);
     });
 
     // Animate function to change arrow button

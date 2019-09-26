@@ -744,8 +744,8 @@ main .beforeSpace {
 }
 
 .presentRealisation {
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 1s, height 0.001s, width 0.001s;
+  transition: all 1s, height 0.001s, width 0.001s;
   height: 80%;
   width: 80%;
   position: absolute;

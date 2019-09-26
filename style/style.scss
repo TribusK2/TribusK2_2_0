@@ -556,7 +556,7 @@ main{
     }
 }
 .presentRealisation{
-    transition: all 1s;
+    transition: all 1s, height 0.001s, width 0.001s;
     height: 80%;
     width: 80%;
     position: absolute;
