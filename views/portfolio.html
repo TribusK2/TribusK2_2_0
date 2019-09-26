@@ -8,17 +8,17 @@
                 <h1 class="text-uppercase">{{textes.title_a}}<span class="biggerLetter">{{textes.title_b}}</span>{{textes.title_c}}<span class="smallerLeter">{{textes.title_d}}</span></h1>
             </div>
         </div>
-        <div class="row">
+        <div class="row mx-0">
             <div class="col-12 row portfolioBox mx-0">
                 <!-- List of projects -->
                 <div class="col-12 realisationBoxWrapper col-lg-6 d-flex flex-wrap justify-content-center align-self-start pt-2">
                     <!-- Realisation boxes -->
-                    <div ng-repeat="project in proj" class="repeatAnimate col-12 col-md-6 p-0 px-sm-5 py-lg-2 px-lg-5 justify-content-center align-self-center">
-                        <div class="realisationBox bg-light text-center" ng-click="displayRealisation()">
-                            <div class="flipWrapper col pt-2">
+                    <div ng-repeat="project in proj" class="repeatAnimate bigTabletDisplay col-12 col-md-6 p-0 px-sm-5 py-2 py-lg-2 px-lg-5 justify-content-center align-self-center">
+                        <div class="realisationBox row bg-light text-center align-items-center" ng-click="displayRealisation()">
+                            <div class="flipWrapper col-6 col-md-12 pt-2 pb-4 pb-md-0">
                                 <img ng-src="./img/{{project.file_name}}" class="img-fluid" alt="{{project.alt}}">
                             </div>
-                            <h3 class="h4 col text-dark m-0 pb-1">{{project.title}}</h3>
+                            <h3 class="h4 col-6 col-md-12 text-dark m-0 pb-1">{{project.title}}</h3>
                         </div>
                     </div>
                     <!-- Realisation boxes end -->
@@ -53,7 +53,7 @@
                         <button type="button" class="close btn shadow-none" ng-click="closeRealisation()" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <!-- Header -->
+                        <!-- Display header -->
                         <div class="headerWrapper row mx-auto pt-1">                   
                             <div class="row col-12 mx-0 px-0">
                                 <div class="col text-uppercase">
@@ -65,12 +65,12 @@
                             </div>
                             <div class="row mx-0">
                                 <div class="col text-uppercase">
-                                    <h6 class="webPage1 font-weight-light"><span class="coloredText">{{textes.box_web}}: </span><a href="https://{{web1}}" class="text-dark" target="_blank">{{web1}}</a></h4>
-                                    <h6 class="webPage2 font-weight-light"><span class="coloredText">{{textes.box_web}}: </span><a href="https://{{web2}}" class="text-dark" target="_blank">{{web2}}</a></h4>
+                                    <h6 class="webPage1 font-weight-light"><span class="coloredText">{{textes.box_web}}: </span><a href="https://{{web1_link}}" class="text-dark" target="_blank">{{web1}}</a></h4>
+                                    <h6 class="webPage2 font-weight-light"><span class="coloredText">{{textes.box_web}}: </span><a href="https://{{web2_link}}" class="text-dark" target="_blank">{{web2}}</a></h4>
                                 </div>
                             </div>
                         </div>
-                        <!-- Header end-->
+                        <!-- Display header end-->
 
                         <!-- Content -->
                         <div class="descriptionWrapper row mx-0 py-2">
@@ -88,21 +88,22 @@
 
                     <!-- Slogan -->
                     <div class="realisationExample col pb-3 d-flex align-items-center justify-content-center">
-                        <div class="text-light text-uppercase display-4 py-4 py-lg-0">{{textes.header1}}</div>
+                        <div class="header1 text-light text-uppercase display-4 py-4 py-lg-0">{{textes.header1}}</div>
                     </div>
                     <div class="realisationExample col pb-4 d-flex align-items-center justify-content-center">
-                        <div class="text-light text-uppercase display-2 py-4 py-lg-0 font-weight-normal">{{textes.header2}}</div>
+                        <div class="header2 text-light text-uppercase display-2 py-4 py-lg-0 font-weight-normal">{{textes.header2}}</div>
                     </div>
                     <!-- Slogan end -->
                 </div>
                 <!-- Current project display end -->
             </div>
 
-            <!-- Header -->
-            <div class="col-12 row justify-content-center order-first order-lg-last pb-5 mb-5 pb-lg-0 mb-lg-0">
+            <!-- Main header -->
+            <div class="realisationHeaderWrapper col-12 row mx-0 justify-content-center order-first order-lg-last pb-1 mb-1 pb-lg-1 mb-lg-1">
                 <h2 class="realisationHeader display-4 text-center mx-5">{{main_header}}</h2>
             </div>
-            <!-- Header end -->
+            <!-- Main header end -->
         </div>
     </section>
+    <!-- <div class="portDistance"></div> -->
 </main>

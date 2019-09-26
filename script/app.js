@@ -210,7 +210,8 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
     let isScroll = function(){
         let main = $('main');
         let screenWidth = $window.innerWidth;
-        if(screenWidth < 992){
+        let screenHeight = $window.innerHeight;
+        if(screenWidth < 992 && screenHeight < 1500){
             main.addClass('scrolledView');
         }else{
             main.removeClass('scrolledView');
@@ -246,6 +247,8 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
         let interval = 1;
         let num = 1;
         let currentProj = $scope.proj;
+        let headerAnimMove = '10px';
+        let realisationHeader = $('.realisationHeader');
         
             // Define current display projects
             switch(currentProj){
@@ -262,6 +265,18 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
 
             // Set action to left arrow
             if(direction == 'left'){
+                // Header animation
+                realisationHeader.animate({
+                    opacity: 0,
+                    left: headerAnimMove,
+                    }, 0, function(){
+                        realisationHeader.animate({
+                            opacity: 1,
+                            left: '0px'
+                    }, 400)
+                });
+                
+                // Arrows animtion
                 if(num > 1){
                     num -= 1;
                 }else{
@@ -284,6 +299,18 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
 
             // Set action to right arrow
             }else if(direction == 'right'){
+                // Header animation
+                realisationHeader.animate({
+                    opacity: 0,
+                    left: '-'+headerAnimMove
+                    }, 0, function(){
+                        realisationHeader.animate({
+                            opacity: 1,
+                            left: '0px'
+                    }, 400)
+                });
+
+                // Arrows animtion
                 if(num < 3){
                     num += 1;
                 }else{
@@ -323,10 +350,15 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
                     $scope.projects = $scope.projects1;
                     $scope.main_header = $scope.textes.main_header['0'];
             }
-
+           
         // Close current display box
         $scope.closeRealisation();
         desWrapperHeight();
+
+        $timeout(function(){
+            let mainViewHeight = parseFloat($('.mainView').css('height'));
+        $('.afterSpace').css('height', mainViewHeight + "px");
+        },1);
     }
 
     // Display direct realisation
@@ -344,14 +376,16 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
         $scope.file_name = this.project.file_name;
         $scope.title = this.project.title;
         $scope.industry = this.project.industry;
+        $scope.web1_link = this.project.web1_link;
         $scope.web1 = this.project.web1;
-        if($scope.web1 === ''){
+        if($scope.web1_link === ''){
             $('.webPage1').css({display: 'none'});
         }else{
             $('.webPage1').css({display: 'block'});
         }
+        $scope.web2_link = this.project.web2_link;
         $scope.web2 = this.project.web2;
-        if($scope.web2 === ''){
+        if($scope.web2_link === ''){
             $('.webPage2').css({display: 'none'});
         }else{
             $('.webPage2').css({display: 'block'});

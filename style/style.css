@@ -618,6 +618,36 @@ main .beforeSpace {
   height: 60vh;
 }
 
+@media screen and (orientation: portrait) and (max-width: 991px) {
+  .portfolioBox {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) and (orientation: landscape) {
+  .portfolioBox {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 575px) and (orientation: landscape) {
+  .portfolioBox {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 991px) and (min-aspect-ratio: 82 / 42) {
+  .portfolioBox {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) and (orientation: landscape) {
+  .portfolioBox {
+    height: 100%;
+  }
+}
+
 .realisationBoxWrapper {
   height: 100%;
 }
@@ -727,6 +757,42 @@ main .beforeSpace {
   top: -170px;
 }
 
+@media screen and (max-width: 575px) {
+  .presentRealisation {
+    height: 120%;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+@media screen and (orientation: portrait) and (max-width: 991px) {
+  .presentRealisation {
+    height: 100%;
+    z-index: 1;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) and (orientation: landscape) {
+  .presentRealisation {
+    height: 100%;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 991px) and (min-aspect-ratio: 82 / 42) {
+  .presentRealisation {
+    height: 100%;
+    z-index: 1;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) and (orientation: landscape) {
+  .presentRealisation {
+    height: 100%;
+    z-index: 1;
+  }
+}
+
 .presentRealisation .close {
   position: absolute;
   color: black;
@@ -768,9 +834,73 @@ main .beforeSpace {
   top: 0%;
 }
 
-.realisationHeader {
+@media screen and (max-width: 575px) {
+  .realisationExample .header1 {
+    font-size: 2rem;
+  }
+  .realisationExample .header2 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (orientation: portrait) and (max-width: 991px) {
+  .realisationHeaderWrapper {
+    border-top: 5px solid #707070;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .realisationHeaderWrapper {
+    border-top: 5px solid #707070;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) and (orientation: landscape) {
+  .realisationHeaderWrapper {
+    border-top: 5px solid #707070;
+  }
+}
+
+.realisationHeaderWrapper .realisationHeader {
+  position: relative;
   margin-top: 2vh;
   font-size: 8vh;
+}
+
+@media screen and (max-width: 575px) {
+  .realisationHeaderWrapper .realisationHeader {
+    font-size: 3rem;
+  }
+}
+
+.portDistance {
+  display: none;
+  height: 60vh;
+  width: 100%;
+  background-color: black;
+  border-bottom: 5px solid #06cfcf;
+  border-left: 5px solid #06cfcf;
+  border-right: 5px solid #06cfcf;
+}
+
+@media screen and (orientation: portrait) and (max-width: 991px) {
+  .portDistance {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 993px) and (orientation: portrait) {
+  .bigTabletDisplay {
+    padding: 0px 5vw !important;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 60%;
+  }
 }
 
 footer p {

@@ -53,3 +53,13 @@
         @content;
     }
 }
+@mixin mQtabletSmallLandscapeNormal{ // from Bootstrap md to Bootstrap lg (landscape)
+    @media screen and (min-width: 768px) and (max-width: 992px) and (orientation: landscape){
+        @content;
+    }
+}
+@mixin mQportraitTabletBig{ // from Bootstrap md to Bootstrap lg (landscape)
+    @media screen and (min-width: 993px) and (orientation: portrait){
+        @content;
+    }
+}

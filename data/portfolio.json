@@ -6,7 +6,9 @@
                 "alt": "Dwa monitory komputera stojące na blacie biurka",
                 "title": "Darex",
                 "industry": "Suwnice",
-                "web1": "www.darexserwis.pl",
+                "web1_link": "www.tribusk2.pl/darex",
+                "web1": "darexserwis.pl",
+                "web2_link": "",
                 "web2": "",
                 "description": "Darex Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
             },{
@@ -14,7 +16,9 @@
                 "alt": "Dwa monitory komputera stojące na blacie biurka",
                 "title": "Rywal",
                 "industry": "Transport",
-                "web1": "www.rywal-transport.pl",
+                "web1_link": "www.rywal-transport.pl",
+                "web1": "rywal-transport.pl",
+                "web2_link": "",
                 "web2": "",
                 "description": "Rywal Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
             },{
@@ -22,7 +26,9 @@
                 "alt": "Dwa monitory komputera stojące na blacie biurka",
                 "title": "BMK",
                 "industry": "Suwnice",
-                "web1": "www.bmksuwnice.pl",
+                "web1_link": "www.bmksuwnice.pl",
+                "web1": "bmksuwnice.pl",
+                "web2_link": "",
                 "web2": "",
                 "description": "BMK Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
             }
@@ -33,15 +39,19 @@
                 "alt": "Dwa monitory komputera stojące na blacie biurka",
                 "title": "Globalbook",
                 "industry": "Kinematografia",
-                "web1": "www.tribusk2.pl/Globalbook/stage1.html",
-                "web2": "www.tribusk2.pl/Globalbook/stage2.html",
+                "web1_link": "www.tribusk2.pl/Globalbook/stage1.html",
+                "web1": "Globalbook/stage1",
+                "web2_link": "www.tribusk2.pl/Globalbook/stage2.html",
+                "web2": "Globalbook/stage2",
                 "description": "Globalbook Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
             },{
                 "file_name": "offer2.jpg",
                 "alt": "Dwa monitory komputera stojące na blacie biurka",
                 "title": "Panello",
                 "industry": "Kinematografia",
-                "web1": "www.tribusk2.pl/panello.html",
+                "web1_link": "www.tribusk2.pl/panello.html",
+                "web1": "Panello/stage1",
+                "web2_link": "",
                 "web2": "",
                 "description": "Panel Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
             }
@@ -52,7 +62,9 @@
                 "alt": "Dwa monitory komputera stojące na blacie biurka",
                 "title": "API",
                 "industry": "Finanse",
+                "web1_link": "",
                 "web1": "",
+                "web2_link": "",
                 "web2": "",
                 "description": "API Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
             }
