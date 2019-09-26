@@ -8,6 +8,81 @@
   src: url(../fonts/Kalam-Bold.ttf);
 }
 
+@font-face {
+  font-family: Kalam-Light;
+  src: url(../fonts/Kalam-Light.ttf);
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  15% {
+    -webkit-transform: rotateZ(2deg);
+            transform: rotateZ(2deg);
+  }
+  30% {
+    -webkit-transform: rotateZ(-2deg);
+            transform: rotateZ(-2deg);
+  }
+  45% {
+    -webkit-transform: rotateZ(2deg);
+            transform: rotateZ(2deg);
+  }
+  60% {
+    -webkit-transform: rotateZ(-2deg);
+            transform: rotateZ(-2deg);
+  }
+  75% {
+    -webkit-transform: rotateZ(2deg);
+            transform: rotateZ(2deg);
+  }
+  90% {
+    -webkit-transform: rotateZ(-2deg);
+            transform: rotateZ(-2deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  15% {
+    -webkit-transform: rotateZ(2deg);
+            transform: rotateZ(2deg);
+  }
+  30% {
+    -webkit-transform: rotateZ(-2deg);
+            transform: rotateZ(-2deg);
+  }
+  45% {
+    -webkit-transform: rotateZ(2deg);
+            transform: rotateZ(2deg);
+  }
+  60% {
+    -webkit-transform: rotateZ(-2deg);
+            transform: rotateZ(-2deg);
+  }
+  75% {
+    -webkit-transform: rotateZ(2deg);
+            transform: rotateZ(2deg);
+  }
+  90% {
+    -webkit-transform: rotateZ(-2deg);
+            transform: rotateZ(-2deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+}
+
 header #navbarNav {
   padding-top: 24px;
   -webkit-transition: all 0.5s;
@@ -926,9 +1001,25 @@ main .beforeSpace {
   font-family: Kalam-regular;
 }
 
-.contactContentWrapper i img {
+.contactContentWrapper a:hover img {
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+}
+
+.contactContentWrapper img {
   height: auto;
   width: 80px;
+}
+
+.imageContactWrapper {
+  position: relative;
+}
+
+.imageContactWrapper:hover .imageContact {
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
 }
 
 .imageContactWrapper .imageContact {
@@ -940,6 +1031,39 @@ main .beforeSpace {
   height: 80vh;
   width: 100%;
   border: 20px solid white;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.imageContactWrapper .imageContact p {
+  text-indent: 1rem;
+}
+
+.imageContactWrapper .blur {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+.imageContactWrapper .imageTextWrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 0px;
+}
+
+.imageContactWrapper .hidenElement {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.imageContactWrapper .hideText {
+  opacity: 0;
+}
+
+.imageContactWrapper .turnOffText {
+  display: none;
 }
 
 .imageContactWrapper .dot {
@@ -956,6 +1080,20 @@ main .beforeSpace {
   font-family: Kalam-bold;
   text-shadow: 5px 5px 10px black;
   cursor: pointer;
+}
+
+.imageContactWrapper button:hover i {
+  color: #07F7F7;
+  text-shadow: 1px 1px 2px black;
+}
+
+.imageContactWrapper button i {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+#colapsedImageText p {
+  font-family: Kalam-Light;
 }
 
 footer p {

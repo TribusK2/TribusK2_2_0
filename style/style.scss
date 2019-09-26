@@ -9,6 +9,21 @@
     font-family: Kalam-Bold;
     src: url(../fonts/Kalam-Bold.ttf);
 }
+@font-face {
+    font-family: Kalam-Light;
+    src: url(../fonts/Kalam-Light.ttf);
+}
+
+@keyframes shake {
+    0%   {transform: rotateZ(0deg);}
+    15%  {transform: rotateZ($shakeAngle);}
+    30%  {transform: rotateZ(-$shakeAngle);}
+    45%  {transform: rotateZ($shakeAngle);}
+    60%  {transform: rotateZ(-$shakeAngle);}
+    75%  {transform: rotateZ($shakeAngle);}
+    90%  {transform: rotateZ(-$shakeAngle);}
+    100% {transform: rotateZ(0deg);}
+}
 
 header{
     #navbarNav{
@@ -694,15 +709,26 @@ main{
 }
 .contactContentWrapper{
     font-family: Kalam-regular;
-    i{
-        img{
-            height: auto;
-            width: 80px;
+    a{
+        &:hover{
+            img{
+                animation-name: shake;
+                animation-duration: 0.2s;
+            }
         }
-        
+    }
+    img{
+        height: auto;
+        width: 80px;
     }
 }
 .imageContactWrapper{
+    position: relative;
+    &:hover{
+        .imageContact{
+            filter: blur(0px);
+        }
+    }
     .imageContact{
         background-image: url(../img/contact.jpg);
         background-position-x: center;
@@ -712,6 +738,30 @@ main{
         height: 80vh;
         width: 100%;
         border: 20px solid white;
+        transition: all 2s;
+        p{
+            text-indent: 1rem;
+        }
+    }
+    .blur{
+        filter: blur(5px);
+    }
+    .imageTextWrapper{
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        bottom: 0px;
+    }
+    .hidenElement{
+        transition: all .3s;
+    }
+    .hideText{
+        opacity: 0;
+    }
+    .turnOffText{
+        display: none;
     }
     .dot{
         height: $dotDiameter;
@@ -726,6 +776,23 @@ main{
         text-shadow: 5px 5px 10px black;
         cursor: pointer;
     }
+    button{
+        &:hover{
+            i{
+                color: $highlightBlue;
+                text-shadow: 1px 1px 2px black; 
+            }
+        }
+        i{
+            transition: all .2s;
+        }
+    }
+}
+#colapsedImageText{
+    p{
+        font-family: Kalam-Light;
+    }
+    
 }
 // contact page end
 

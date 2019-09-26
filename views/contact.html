@@ -11,18 +11,32 @@
         <div class="contactContentWrapper col-12 row mx-0 px-0">
             <div class="col-4 mx-auto text-center px-0 mx-0 mt-2">
                 <div ng-repeat="icon in icons" class="my-4">
-                    <i><img ng-src="./icons/{{icon.file_name}}" alt="{{icon.alt}}"></i>
-                    <h3 class="mt-2"><a class="text-dark" href="{{icon.link}}" title="{{icon.title}}" target="_blank">{{icon.text}}</a></h3>
+                    <a class="text-dark" href="{{icon.link}}" title="{{icon.title}}" target="_blank">
+                        <img ng-src="./icons/{{icon.file_name}}" alt="{{icon.alt}}">
+                        <h3 class="mt-2">{{icon.text}}</h3>
+                    </a>
                 </div>
             </div>
-            <div class="col-8 imageContactWrapper p-0 mx-0">
-                <div class="imageContact row align-items-end mx-0">
-                    <div class="col text-center">
+            <div class="col-8 imageContactWrapper p-0 mx-0 text-center">
+                <div class="imageContact blur row align-items-end mx-0">
+                    <div id="colapsedImageText" class="collapse bg-light align-self-start p-4 text-right">
+                        <button class="btn shadow-none" ng-click="toggleText()" type="button" data-toggle="collapse" data-target="#colapsedImageText" aria-expanded="false" aria-controls="colapsedImageText">
+                            <i>X</i>
+                        </button>
+                        <h3 class="text-left">Lorem ipsum dolor sit amet.</h3>
+                        <p class="text-left">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam cupiditate nam laborum doloremque explicabo, voluptate sapiente, id soluta iure quo, neque dolorum magni? Praesentium commodi cupiditate consectetur cum, corrupti doloremque.</p>
+                        <p class="text-left">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, soluta non consequatur, quos, reiciendis ipsum voluptatibus consectetur perspiciatis rem numquam nobis ut dolores fugiat harum rerum saepe ipsa a atque!</p>
+                        <p class="text-left">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque omnis, animi culpa praesentium tenetur illum sed a dicta non asperiores commodi quia, nisi molestiae ipsum, quidem consequatur quae sequi quisquam.</p>
+                        <p class="text-right">Krzysztof Rytlewski</p>
+                    </div>
+                </div>
+                <div class="hidenElement">
+                    <button class="imageTextWrapper col-8 text-center btn shadow-none" ng-click="toggleText()" type="button" data-toggle="collapse" data-target="#colapsedImageText" aria-expanded="false" aria-controls="colapsedImageText">
                         <div class="dot mx-auto"></div>
                         <h2 class="display-2 text-light mx-auto py-5 mb-5 text-capitalize">{{textes.header2}}</h2> 
-                    </div>
-                    
+                    </button>
                 </div>
+                
             </div>
         </div>
     </section>

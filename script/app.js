@@ -413,13 +413,29 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
     }
 }]);
 
-myApp.controller('contactCtrl', ['$scope', '$http', function($scope, $http){
+myApp.controller('contactCtrl', ['$scope', '$http', '$timeout', function($scope, $http, $timeout){
 
     // Getting data from json file
     $http.get('./data/contact.json').then(function(response){
         $scope.icons = response.data.icons;
         $scope.textes = response.data.textes;
     });
-    
 
+    // Toggle text function
+    $scope.toggleText = function(){
+        let imageContact = $('.imageContact');
+        let hidenElement = $('.hidenElement');
+        imageContact.toggleClass('blur');
+        if(hidenElement.hasClass('turnOffText')){
+            hidenElement.toggleClass('turnOffText');
+            $timeout(function(){
+                hidenElement.toggleClass('hideText');
+            }, 1);
+        }else{
+            hidenElement.toggleClass('hideText');
+            $timeout(function(){
+                hidenElement.toggleClass('turnOffText');
+            }, 300); // timeout must be the same as 'transition' on class hidenElement
+        }
+    }
 }]);
