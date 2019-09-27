@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Projektowanie stron oraz aplikacji inernetowych.">
@@ -20,8 +20,13 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.min.js"></script> -->
     <script src="cdn/route.js"></script>
     <script src="script/app.js"></script>
+    <script src="script/ctrl/start_ctrl.js"></script>
+    <script src="script/ctrl/offer_ctrl.js"></script>
+    <script src="script/ctrl/portfolio_ctrl.js"></script>
+    <script src="script/ctrl/contact_ctrl.js"></script>
 </head>
 <body ng-app=myApp ng-controller="bodyCtrl">
+    <!-- header with menu -->
     <header class="fixed-top">
         <div class="container-fluid mx-0 px-0">
             <div class="row mx-0">
@@ -62,6 +67,7 @@
             </div>
         </div>   
     </header>
+    <!-- header with menu end -->
 
     <!-- main view -->
     <div ng-view class="mainView animate"></div>
@@ -70,6 +76,7 @@
     <!-- space needed to make regular distance afer main display -->
     <div class="afterSpace"></div>
 
+    <!-- footer -->
     <footer class="bg-light mx-0">
         <div class="col mx-0 px-1">
             <div class="row mx-0 px-0 text-right">
@@ -79,6 +86,8 @@
             </div>
         </div>
     </footer>
+    <!-- footer end-->
+    
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
     <script src="cdn/jquery.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->

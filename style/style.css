@@ -1092,6 +1092,11 @@ main .beforeSpace {
   transition: all .2s;
 }
 
+#colapsedImageText {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
 #colapsedImageText p {
   font-family: Kalam-Light;
 }
