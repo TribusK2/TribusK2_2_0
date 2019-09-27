@@ -705,6 +705,12 @@ main{
     color: lighten($navBase, 40%);
     h1{
         font-size: 4rem;
+        @include mQmobileMedium{
+            font-size: 3rem;
+        }
+        @include mQmobileSmall{
+            font-size: 2.5rem;
+        }
     }
 }
 .contactContentWrapper{
@@ -720,6 +726,9 @@ main{
     img{
         height: auto;
         width: 80px;
+        @include mQfullHD{
+            margin-top: 36px !important;
+        }
     }
 }
 .imageContactWrapper{
@@ -738,13 +747,16 @@ main{
         height: 80vh;
         width: 100%;
         border: 20px solid white;
-        transition: all 2s;
+        transition: all .5s;
+        @include mQmobileXL{
+            height: 60vh;
+        }
         p{
             text-indent: 1rem;
         }
     }
     .blur{
-        filter: blur(5px);
+        filter: blur(15px);
     }
     .imageTextWrapper{
         position: absolute;
@@ -770,11 +782,38 @@ main{
         background-color: $highlightBlue;
         box-shadow: 5px 5px 10px black;
         cursor: pointer;
+        @include mQmobileMedium{
+            height: $dotDiameterMedium;
+            width: $dotDiameterMedium;
+            border-radius: $dotDiameterMedium/2;
+        }
+        @include mQmobileSmall{
+            height: $dotDiameterSmall;
+            width: $dotDiameterSmall;
+            border-radius: $dotDiameterSmall/2;
+        }
     }
     h2{
         font-family: Kalam-bold;
         text-shadow: 5px 5px 10px black;
         cursor: pointer;
+        @include mQmobileMedium{
+            font-size: 4rem;
+            padding-top: 36px !important;
+            margin-bottom: 0px !important;
+        }
+        @include mQmobileSmall{
+            font-size: 3rem;
+        }
+        @include mQmobileSmallLandscape{
+            padding-top: 36px !important;
+            margin-bottom: 0px !important;
+        }
+        @include mQmobilePanoram{
+            font-size: 4rem;
+            padding-top: 36px !important;
+            margin-bottom: 0px !important;
+        }
     }
     button{
         &:hover{
@@ -793,7 +832,6 @@ main{
     p{
         font-family: Kalam-Light;
     }
-    
 }
 // contact page end
 

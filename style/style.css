@@ -997,6 +997,18 @@ main .beforeSpace {
   font-size: 4rem;
 }
 
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .contactHeaderWrapper h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .contactHeaderWrapper h1 {
+    font-size: 2.5rem;
+  }
+}
+
 .contactContentWrapper {
   font-family: Kalam-regular;
 }
@@ -1011,6 +1023,12 @@ main .beforeSpace {
 .contactContentWrapper img {
   height: auto;
   width: 80px;
+}
+
+@media screen and (min-width: 1441px) {
+  .contactContentWrapper img {
+    margin-top: 36px !important;
+  }
 }
 
 .imageContactWrapper {
@@ -1031,8 +1049,14 @@ main .beforeSpace {
   height: 80vh;
   width: 100%;
   border: 20px solid white;
-  -webkit-transition: all 2s;
-  transition: all 2s;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+@media screen and (max-width: 991px) and (max-aspect-ratio: 42 / 82) {
+  .imageContactWrapper .imageContact {
+    height: 60vh;
+  }
 }
 
 .imageContactWrapper .imageContact p {
@@ -1040,8 +1064,8 @@ main .beforeSpace {
 }
 
 .imageContactWrapper .blur {
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
+  -webkit-filter: blur(15px);
+          filter: blur(15px);
 }
 
 .imageContactWrapper .imageTextWrapper {
@@ -1076,10 +1100,55 @@ main .beforeSpace {
   cursor: pointer;
 }
 
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .imageContactWrapper .dot {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .imageContactWrapper .dot {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+  }
+}
+
 .imageContactWrapper h2 {
   font-family: Kalam-bold;
   text-shadow: 5px 5px 10px black;
   cursor: pointer;
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .imageContactWrapper h2 {
+    font-size: 4rem;
+    padding-top: 36px !important;
+    margin-bottom: 0px !important;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .imageContactWrapper h2 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 575px) and (orientation: landscape) {
+  .imageContactWrapper h2 {
+    padding-top: 36px !important;
+    margin-bottom: 0px !important;
+  }
+}
+
+@media screen and (max-width: 991px) and (min-aspect-ratio: 82 / 42) {
+  .imageContactWrapper h2 {
+    font-size: 4rem;
+    padding-top: 36px !important;
+    margin-bottom: 0px !important;
+  }
 }
 
 .imageContactWrapper button:hover i {

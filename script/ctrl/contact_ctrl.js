@@ -35,7 +35,7 @@ myApp.controller('contactCtrl', ['$scope', '$http', '$timeout', 'isScroll', func
             colapsedImageText.toggleClass('hideText');
             $timeout(function(){
                 hidenElement.toggleClass('turnOffText');
-            }, 300); // timeout must be the same as 'transition' on class hidenElement
+            }, 30); // timeout must be the same as 'transition' on class hidenElement
         }
     }
 }]);

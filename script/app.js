@@ -34,7 +34,7 @@ myApp.service('isScroll', function($window){
         let main = $('main');
         let screenWidth = $window.innerWidth;
         let screenHeight = $window.innerHeight;
-        if(screenWidth < 992 && screenHeight < 1500){
+        if(screenWidth < 992 && screenHeight < 1500 || screenHeight < 700){
             main.addClass('scrolledView');
         }else{
             main.removeClass('scrolledView');
@@ -143,7 +143,7 @@ myApp.controller('bodyCtrl', ['$scope', '$location', '$document', '$window', '$t
     window.addEventListener("resize", function(){
         $timeout(function(){
             mainHeighFunction();
-        },1);
+        },500);
     });
     window.addEventListener("scroll", function(){
         $timeout(function(){

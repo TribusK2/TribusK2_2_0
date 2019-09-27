@@ -6,7 +6,7 @@
         <!-- Header -->
         <div class="contactHeaderWrapper col-12 row mx-0">
             <div class="col">
-                <h1 class="text-uppercase">{{textes.header1}}</h1>
+                <h1 class="text-uppercase text-center text-lg-left">{{textes.header1}}</h1>
             </div>
         </div>
         <!-- Header end -->
@@ -17,7 +17,7 @@
             <div class="col-12 col-lg-4 mx-auto text-center px-0 mx-0 mt-2">
                 <div ng-repeat="icon in icons" class="my-4">
                     <a class="text-dark" href="{{icon.link}}" title="{{icon.title}}" target="_blank">
-                        <img ng-src="./icons/{{icon.file_name}}" alt="{{icon.alt}}">
+                        <img class="mt-1" ng-src="./icons/{{icon.file_name}}" alt="{{icon.alt}}">
                         <h3 class="mt-2">{{icon.text}}</h3>
                     </a>
                 </div>
@@ -25,7 +25,7 @@
             <!-- Contact data end -->
 
             <!-- "Check Us" content -->
-            <div class="col-8 imageContactWrapper p-0 mx-0 text-center">
+            <div class="col-12 col-lg-8 imageContactWrapper p-0 mx-0 text-center order-first order-lg-last">
                 <div class="imageContact blur row align-items-end mx-0">
                     <div id="colapsedImageText" class="hideText collapse bg-light align-self-start p-4 text-right">
                         <button class="btn shadow-none" ng-click="toggleText()" type="button" data-toggle="collapse" data-target="#colapsedImageText" aria-expanded="false" aria-controls="colapsedImageText">
