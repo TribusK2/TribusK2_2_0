@@ -1,9 +1,21 @@
-myApp.controller('contactCtrl', ['$scope', '$http', '$timeout', function($scope, $http, $timeout){
+myApp.controller('contactCtrl', ['$scope', '$http', '$timeout', 'isScroll', function($scope, $http, $timeout, isScroll){
 
     // Getting data from json file
     $http.get('./data/contact.json').then(function(response){
         $scope.icons = response.data.icons;
         $scope.textes = response.data.textes;
+    });
+
+    // Set function to change main display to scrollable or not
+    $scope.isScroll = isScroll.isScrollFunction;          //This function is call from custom service "isScroll"
+
+    // Set function to run on events
+    $scope.$on('$viewContentLoaded', function() {
+        $scope.isScroll();
+    });
+
+    window.addEventListener("resize", function(){
+        $scope.isScroll();
     });
 
     // Toggle text function

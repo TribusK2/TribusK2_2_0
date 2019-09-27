@@ -1,4 +1,4 @@
-myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', function($scope, $http, $window, $timeout){
+myApp.controller('portfolioCtrl', ['$scope', '$http', '$timeout', 'isScroll', function($scope, $http, $timeout, isScroll){
 
     // Getting data from json file
     $http.get('./data/portfolio.json').then(function(response){
@@ -9,16 +9,8 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
     });
 
     // Set function to change main display to scrollable or not
-    let isScroll = function(){
-        let main = $('main');
-        let screenWidth = $window.innerWidth;
-        let screenHeight = $window.innerHeight;
-        if(screenWidth < 992 && screenHeight < 1500){
-            main.addClass('scrolledView');
-        }else{
-            main.removeClass('scrolledView');
-        }
-    }
+    $scope.isScroll = isScroll.isScrollFunction;          //This function is call from custom service "isScroll"
+
 
     // Set height of descriptionWrapper
     let desWrapperHeight = function(){
@@ -31,12 +23,12 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$window', '$timeout', fun
 
     // Set function to run on events
     $scope.$on('$viewContentLoaded', function() {
-        isScroll();
+        $scope.isScroll();
         desWrapperHeight();
     });
 
     window.addEventListener("resize", function(){
-        isScroll();
+        $scope.isScroll();
         $timeout(function(){
             desWrapperHeight();
         },1);
