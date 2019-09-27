@@ -109,6 +109,7 @@ main{
 
 // start page
 .hedersWrapper{
+    z-index: 1;
     position: absolute;
     width: 100%;
     top: 18vh;
@@ -255,13 +256,19 @@ main{
 .imageWrapper{
     text-align: center;
     width: 80%;
+    // border: 1px solid red;
+    overflow: hidden;
 }
 .mainImage{
-    width: 100%;
+    // border: 1px solid green;
+    width: 106%;
     height: 85vh;
+    position: relative;
+    top: -2vh;
+    left: -3%;
     background-image: url(../img/mainDisplay.jpg);
-    background-position-x: center;
-    background-position-y: top;
+    // background-position-x: center;
+    // background-position-y: center;
     background-repeat: no-repeat;
     background-size: cover;
     @include mQportraitMobile{

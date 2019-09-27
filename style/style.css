@@ -194,6 +194,7 @@ main .beforeSpace {
 }
 
 .hedersWrapper {
+  z-index: 1;
   position: absolute;
   width: 100%;
   top: 18vh;
@@ -424,14 +425,16 @@ main .beforeSpace {
 .imageWrapper {
   text-align: center;
   width: 80%;
+  overflow: hidden;
 }
 
 .mainImage {
-  width: 100%;
+  width: 106%;
   height: 85vh;
+  position: relative;
+  top: -2vh;
+  left: -3%;
   background-image: url(../img/mainDisplay.jpg);
-  background-position-x: center;
-  background-position-y: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
