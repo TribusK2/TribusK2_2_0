@@ -20,5 +20,48 @@
     "textes":{
         "header1": "Specjalizujemy się w stronach dla przemysłu technicznego",
         "header2": "Technologie"
-    }
+    },
+    "logos":[
+        {
+            "file_name": "logo_html.png",
+            "alt": "logo HTML",
+            "title": "HTML",
+            "link": "https://www.w3.org/html/"
+        },{
+            "file_name": "logo_css.png",
+            "alt": "logo CSS",
+            "title": "CSS",
+            "link": "https://www.w3.org/Style/CSS/Overview.en.html"
+        },{
+            "file_name": "logo_javascript.png",
+            "alt": "logo JavaScript",
+            "title": "JavaScript",
+            "link": "https://www.ecma-international.org/"
+        },{
+            "file_name": "logo_sass.png",
+            "alt": "logo SASS",
+            "title": "SASS",
+            "link": "https://sass-lang.com/"
+        },{
+            "file_name": "logo_jquery.png",
+            "alt": "logo jQuery",
+            "title": "jQuery",
+            "link": "https://jquery.com/"
+        },{
+            "file_name": "logo_angularjs.png",
+            "alt": "logo AngularJS",
+            "title": "AngularJS",
+            "link": "https://angularjs.org/"
+        },{
+            "file_name": "logo_php.png",
+            "alt": "logo PHP",
+            "title": "PHP",
+            "link": "https://www.php.net/"
+        },{
+            "file_name": "logo_mysql.png",
+            "alt": "logo MySql",
+            "title": "MySql",
+            "link": "https://www.mysql.com/"
+        }
+    ]
 }

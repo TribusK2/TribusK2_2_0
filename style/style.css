@@ -623,6 +623,8 @@ main .beforeSpace {
 .arrowDownButton, .arrowUpButton {
   height: 60px;
   border-radius: 0px;
+  left: 0px;
+  bottom: 0px;
 }
 
 .arrowDownButton .arrowDownWrapper, .arrowUpButton .arrowDownWrapper, .arrowUpButton .arrowUpWrapper {
@@ -690,6 +692,21 @@ main .beforeSpace {
   .tech h1 {
     font-size: 2.5rem;
   }
+}
+
+.techWrapper .cardWrapper {
+  position: absolute;
+  height: 120px;
+}
+
+.techWrapper .logoWrapper {
+  width: 100px;
+  height: 80%;
+}
+
+.circle3D {
+  position: relative;
+  border: 1px solid black;
 }
 
 .biggerLetter {

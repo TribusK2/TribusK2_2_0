@@ -27,20 +27,22 @@ myApp.config(['$routeProvider', function($routeProvider){
     });
 }]);
 
-myApp.service('isScroll', function($window){
+myApp.service('isScroll', ['$window', function($window){
     
     // Set function to change main display to scrollable or not
     this.isScrollFunction = function(){
         let main = $('main');
         let screenWidth = $window.innerWidth;
         let screenHeight = $window.innerHeight;
-        if(screenWidth < 992 && screenHeight < 1500 || screenHeight < 700){
-            main.addClass('scrolledView');
-        }else{
-            main.removeClass('scrolledView');
+        if(!main.hasClass('scrolledView')){
+            if(screenWidth < 992 && screenHeight < 1500 || screenHeight < 700){
+                main.addClass('scrolledView');
+            }else{
+                main.removeClass('scrolledView');
+            }
         }
     }
-});
+}]);
 
 myApp.controller('bodyCtrl', ['$scope', '$location', '$document', '$window', '$timeout', function($scope, $location, $document, $window, $timeout){
     

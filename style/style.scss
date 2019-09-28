@@ -420,6 +420,8 @@ main{
 .arrowDownButton{
     height: 60px;
     border-radius: 0px;
+    left: 0px;
+    bottom: 0px;
     .arrowDownWrapper{
         width: 40px;
         height: 50px;
@@ -479,6 +481,25 @@ main{
             font-size: 2.5rem;
         }
     }
+}
+
+.techWrapper{
+    // border: 1px solid red;
+    .cardWrapper{
+        // border: 1px solid black;
+        position: absolute;
+        height: 120px;
+        // background-color: $highlightBlueSemi;
+    }
+    .logoWrapper{
+        width: 100px;
+        height: 80%;
+    }
+}
+.circle3D{
+    position: relative;
+    border: 1px solid black;
+
 }
 // offer page end
 

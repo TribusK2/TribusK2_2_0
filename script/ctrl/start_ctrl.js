@@ -5,6 +5,7 @@ myApp.controller('startCtrl', ['$scope', '$http', function($scope, $http){
         $scope.textes = response.data.textes;
     });
 
+    // Animation effect on mouse move
     $("body").mousemove(function(e) {
         let mainImage = $('.mainImage');
         let windowWidth = $(window).width();
