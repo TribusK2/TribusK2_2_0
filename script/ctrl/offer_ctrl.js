@@ -69,15 +69,15 @@ myApp.controller('offerCtrl', ['$scope', '$http', '$window', '$timeout', functio
         arrowUpButton.css('bottom', maouseY);
     });
 
-    // technology animation  
+    // technology animation
     let circle3D = $('.circle3D');
     let techWrapper = $('.techWrapper');
     let radius = 300;                       // Circle radius (px)
     let alfa = 45;                          // Distance angle between elements (deg)
-    let beta = 0;                           // Elements angle position on circle
+    let beta;                               // Elements angle position on circle
     let proportion = 4;
     let b = radius/proportion + 60;         // Circle midpoint y position (px)
-    setInterval(() => {
+    let move = setInterval(() => {
         let cardWrapper = $('.cardWrapper');
         let cardWrapperW = cardWrapper.width();
         let cardWrapperH = cardWrapper.height();
@@ -139,6 +139,11 @@ myApp.controller('offerCtrl', ['$scope', '$http', '$window', '$timeout', functio
         circle3D[0].style.borderRadius = radius*proportion + 'px /' + radius + 'px';
         circle3D[0].style.top = b - radius/proportion  + 'px';
         techWrapper[0].style.height = b*2 + 'px';
+        console.log(beta);
     }, 1);
+    
+    $scope.$on('$locationChangeStart', function() {
+        clearInterval(move);
+    });
     
 }]);
