@@ -143,6 +143,7 @@ myApp.controller('offerCtrl', ['$scope', '$http', '$window', '$timeout', functio
     
     $scope.$on('$locationChangeStart', function() {
         clearInterval(move);
+        $('main').removeClass('scrolledView');
     });
     
 }]);
