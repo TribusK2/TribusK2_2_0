@@ -37,5 +37,13 @@ myApp.controller('contactCtrl', ['$scope', '$http', '$timeout', 'isScroll', func
                 hidenElement.toggleClass('turnOffText');
             }, 30); // timeout must be the same as 'transition' on class hidenElement
         }
-    }
+    };
+
+    // Remove scrolled function of main section
+    $scope.$on('$locationChangeStart', function() {
+        $('main').removeClass('scrolledView');
+        $scope.isScroll = function(){
+            return;
+        };
+    });
 }]);

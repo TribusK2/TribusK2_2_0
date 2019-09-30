@@ -1,3 +1,4 @@
+"use strict";
 var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate']);
 
 myApp.config(['$routeProvider', function($routeProvider){
@@ -30,7 +31,8 @@ myApp.config(['$routeProvider', function($routeProvider){
 myApp.service('isScroll', ['$window', function($window){
     
     // Set function to change main display to scrollable or not
-    this.isScrollFunction = function(){
+    this.isScrollFunction = function(a){
+        a;
         let main = $('main');
         let screenWidth = $window.innerWidth;
         let screenHeight = $window.innerHeight;
@@ -141,6 +143,7 @@ myApp.controller('bodyCtrl', ['$scope', '$location', '$document', '$window', '$t
         let mainViewHeight = parseFloat($('.mainView').css('height'));
         $('.afterSpace').css('height', mainViewHeight + "px");
     }
+    
     // Define event to seting mainViewHeight
     window.addEventListener("resize", function(){
         $timeout(function(){

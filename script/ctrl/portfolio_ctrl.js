@@ -211,4 +211,12 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$timeout', 'isScroll', fu
             'top': '0%'
         });
     }
+
+    // Remove scrolled function of main section
+    $scope.$on('$locationChangeStart', function() {
+        $('main').removeClass('scrolledView');
+        $scope.isScroll = function(){
+            return;
+        };
+    });
 }]);

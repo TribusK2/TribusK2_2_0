@@ -141,6 +141,7 @@ myApp.controller('offerCtrl', ['$scope', '$http', '$window', '$timeout', functio
         techWrapper[0].style.height = b*2 + 'px';
     }, 1);
     
+    // Stop animation and remove scrolled function of main section
     $scope.$on('$locationChangeStart', function() {
         clearInterval(move);
         $('main').removeClass('scrolledView');
