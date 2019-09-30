@@ -485,21 +485,25 @@ main{
 
 .techWrapper{
     // border: 1px solid red;
+    overflow: hidden;
     .cardWrapper{
         // border: 1px solid black;
         position: absolute;
         height: 120px;
-        // background-color: $highlightBlueSemi;
+        // background-color: beige;
     }
     .logoWrapper{
         width: 100px;
         height: 80%;
+        img{
+            -webkit-filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.8));
+            filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.8));
+        }
     }
 }
 .circle3D{
     position: relative;
-    border: 1px solid black;
-
+    // border: 1px solid black;
 }
 // offer page end
 

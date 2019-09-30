@@ -694,6 +694,10 @@ main .beforeSpace {
   }
 }
 
+.techWrapper {
+  overflow: hidden;
+}
+
 .techWrapper .cardWrapper {
   position: absolute;
   height: 120px;
@@ -704,9 +708,13 @@ main .beforeSpace {
   height: 80%;
 }
 
+.techWrapper .logoWrapper img {
+  -webkit-filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.8));
+  filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.8));
+}
+
 .circle3D {
   position: relative;
-  border: 1px solid black;
 }
 
 .biggerLetter {
