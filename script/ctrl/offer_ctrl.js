@@ -139,7 +139,6 @@ myApp.controller('offerCtrl', ['$scope', '$http', '$window', '$timeout', functio
         circle3D[0].style.borderRadius = radius*proportion + 'px /' + radius + 'px';
         circle3D[0].style.top = b - radius/proportion  + 'px';
         techWrapper[0].style.height = b*2 + 'px';
-        console.log(beta);
     }, 1);
     
     $scope.$on('$locationChangeStart', function() {

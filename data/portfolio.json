@@ -2,23 +2,23 @@
     "projects":{
         "proj1":[
             {
-                "file_name": "offer1.jpg",
-                "alt": "Dwa monitory komputera stojące na blacie biurka",
+                "file_name": "darex01.jpg",
+                "alt": "Zrzut ekranu ze strony firmowej Darex",
                 "title": "Darex",
                 "industry": "Suwnice",
                 "web1_link": "www.tribusk2.pl/darex",
                 "web1": "darexserwis.pl",
                 "web2_link": "",
                 "web2": "",
-                "second_header": "Oficjalna strona firmy Darexserwis",
+                "second_header": "Oficjalna strona firmy Darex",
                 "description1": "- Opracowanie oryginalnego wyglądu strony (design).",
                 "description2": "- Zaprojektowanie funkcjonalności zgodnie z wymaganiami.",
                 "description3": "- Realizacja kodu.",
                 "description4": "- Zamieszczenie treści oraz grafiki.",
                 "description5": "- Przygotowanie strony pod ewentualną rozbudowę w kierunku samodzielnej modyfikacji treści przez klienta."
             },{
-                "file_name": "offer2.jpg",
-                "alt": "Dwa monitory komputera stojące na blacie biurka",
+                "file_name": "rywal01.jpg",
+                "alt": "Zrzut ekranu ze strony firmowej Rywal",
                 "title": "Rywal",
                 "industry": "Transport",
                 "web1_link": "www.rywal-transport.pl",
@@ -33,8 +33,8 @@
                 "description5": "- Realizacja kodu.",
                 "description6": "- Zamieszczenie treści oraz grafiki."
             },{
-                "file_name": "offer3.jpg",
-                "alt": "Dwa monitory komputera stojące na blacie biurka",
+                "file_name": "bmk01.jpg",
+                "alt": "Zrzut ekranu ze strony firmowej BMK",
                 "title": "BMK",
                 "industry": "Suwnice",
                 "web1_link": "www.bmksuwnice.pl",
@@ -49,8 +49,8 @@
         ],
         "proj2":[
             {
-                "file_name": "offer1.jpg",
-                "alt": "Dwa monitory komputera stojące na blacie biurka",
+                "file_name": "globalbook01.jpg",
+                "alt": "Zrzut ekranu scenografii filmowej",
                 "title": "Globalbook",
                 "industry": "Kinematografia",
                 "web1_link": "www.tribusk2.pl/Globalbook/stage1.html",
@@ -61,8 +61,8 @@
                 "description1": "- Opracowanie funkcjonalności aplikacji zgodnie ze scenariuszem filmowym.",
                 "description2": "- Realizacja kodu."
             },{
-                "file_name": "offer2.jpg",
-                "alt": "Dwa monitory komputera stojące na blacie biurka",
+                "file_name": "panello01.jpg",
+                "alt": "Zrzut ekranu scenografii filmowej",
                 "title": "Panello",
                 "industry": "Kinematografia",
                 "web1_link": "www.tribusk2.pl/panello.html",
@@ -77,7 +77,7 @@
         ],
         "proj3":[
             {
-                "file_name": "offer1.jpg",
+                "file_name": "nbpapi01.jpg",
                 "alt": "Dwa monitory komputera stojące na blacie biurka",
                 "title": "Kursy walut NBP",
                 "industry": "Finanse",
