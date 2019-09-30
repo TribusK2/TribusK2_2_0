@@ -10,7 +10,12 @@
                 "web1": "darexserwis.pl",
                 "web2_link": "",
                 "web2": "",
-                "description": "Darex Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
+                "second_header": "Oficjalna strona firmy Darexserwis",
+                "description1": "- Opracowanie oryginalnego wyglądu strony (design).",
+                "description2": "- Zaprojektowanie funkcjonalności zgodnie z wymaganiami.",
+                "description3": "- Realizacja kodu.",
+                "description4": "- Zamieszczenie treści oraz grafiki.",
+                "description5": "- Przygotowanie strony pod ewentualną rozbudowę w kierunku samodzielnej modyfikacji treści przez klienta."
             },{
                 "file_name": "offer2.jpg",
                 "alt": "Dwa monitory komputera stojące na blacie biurka",
@@ -20,7 +25,13 @@
                 "web1": "rywal-transport.pl",
                 "web2_link": "",
                 "web2": "",
-                "description": "Rywal Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
+                "second_header": "Oficjalna strona firmy Rywal. Etap I.",
+                "description1": "- Opracowanie wyglądu oraz funkcjonalności strony wg wskazań klienta.",
+                "description2": "- Zaprojektowanie formularza aplikacyjnego pod oferty pracy.",
+                "description3": "- Zaprojektowanie bazy danych pod aplikacje kandydatów.",
+                "description4": "- Zaprojektowanie panelu administracyjnego do zarządzania CV kandydatów.",
+                "description5": "- Realizacja kodu.",
+                "description6": "- Zamieszczenie treści oraz grafiki."
             },{
                 "file_name": "offer3.jpg",
                 "alt": "Dwa monitory komputera stojące na blacie biurka",
@@ -30,7 +41,10 @@
                 "web1": "bmksuwnice.pl",
                 "web2_link": "",
                 "web2": "",
-                "description": "BMK Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
+                "second_header": "Oficjalna strona firmy BMK. Projekt realizowany przy współpracy z firmą Brandrei.",
+                "description1": "- Przebudowa wyglądu strony zgodnie z możliwościami istniejącego szablonu.",
+                "description2": "- Dobór zdjęć i grafiki.",
+                "description3": "- Napisanie branżowej treści na stronę."
             }
         ],
         "proj2":[
@@ -43,7 +57,9 @@
                 "web1": "Globalbook/stage1",
                 "web2_link": "www.tribusk2.pl/Globalbook/stage2.html",
                 "web2": "Globalbook/stage2",
-                "description": "Globalbook Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
+                "second_header": "Scenografia do polskiego filmu. Imitacja portalu społecznościowego. Projekt zrealizowany przy współpracy z Patrykiem Chylińskim, artystą sztuki generatywnej.",
+                "description1": "- Opracowanie funkcjonalności aplikacji zgodnie ze scenariuszem filmowym.",
+                "description2": "- Realizacja kodu."
             },{
                 "file_name": "offer2.jpg",
                 "alt": "Dwa monitory komputera stojące na blacie biurka",
@@ -53,20 +69,26 @@
                 "web1": "Panello/stage1",
                 "web2_link": "",
                 "web2": "",
-                "description": "Panel Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
+                "second_header": "Scenografia do polskiego filmu. Imitacja panelu logowania stylizowanego na lata 80'te. Projekt zrealizowany przy współpracy z Patrykiem Chylińskim, artystą sztuki generatywnej.",
+                "description1": "- Projekt graficzny aplikacji.",
+                "description2": "- Opracowanie funkcjonalności aplikacji zgodnie ze scenariuszem filmowym.",
+                "description3": "- Realizacja kodu."
             }
         ],
         "proj3":[
             {
                 "file_name": "offer1.jpg",
                 "alt": "Dwa monitory komputera stojące na blacie biurka",
-                "title": "API",
+                "title": "Kursy walut NBP",
                 "industry": "Finanse",
                 "web1_link": "",
                 "web1": "",
                 "web2_link": "",
                 "web2": "",
-                "description": "API Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste recusandae deleniti eveniet quasi iure quibusdam minus repellat ducimus odit, reiciendis cum temporibus error tenetur porro eos voluptatibus, fugit sit?"
+                "second_header": "Aplikacja do odczytu kursu walut NBP.",
+                "description1": "- Projekt graficzny aplikacji.",
+                "description2": "- Opracowanie zakresu pobierania i przetwarzania danych z API NBP.",
+                "description3": "- Realizacja kodu."
             }
         ]
     },

@@ -186,7 +186,13 @@ myApp.controller('portfolioCtrl', ['$scope', '$http', '$timeout', 'isScroll', fu
         }else{
             $('.webPage2').css({display: 'block'});
         }
-        $scope.description = this.project.description;
+        $scope.second_header = this.project.second_header;
+        $scope.description1 = this.project.description1;
+        $scope.description2 = this.project.description2;
+        $scope.description3 = this.project.description3;
+        $scope.description4 = this.project.description4;
+        $scope.description5 = this.project.description5;
+        $scope.description6 = this.project.description6;
         $timeout(function(){
             desWrapperHeight();
         }, 1);

@@ -400,6 +400,9 @@ main{
     &::-webkit-scrollbar {
         display: none;
     }
+    p{
+        text-indent: 1rem;
+    }
 }
 .close {
     color: #fff; 
@@ -663,9 +666,6 @@ main{
             display: none;
         } 
     }
-    p{
-        text-indent: 1rem;
-    }
     .imgWrapper{
         max-height: 90%;
         img{
@@ -863,6 +863,9 @@ main{
     transition: all 0.3s;
     p{
         font-family: Kalam-Light;
+    }
+    h3{
+        text-indent: 1rem;
     }
 }
 // contact page end

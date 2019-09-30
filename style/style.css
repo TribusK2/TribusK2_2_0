@@ -601,6 +601,10 @@ main .beforeSpace {
   display: none;
 }
 
+.bannerText p {
+  text-indent: 1rem;
+}
+
 .close {
   color: #fff;
   opacity: 1;
@@ -928,10 +932,6 @@ main .beforeSpace {
   display: none;
 }
 
-.presentRealisation p {
-  text-indent: 1rem;
-}
-
 .presentRealisation .imgWrapper {
   max-height: 90%;
 }
@@ -1196,6 +1196,10 @@ main .beforeSpace {
 
 #colapsedImageText p {
   font-family: Kalam-Light;
+}
+
+#colapsedImageText h3 {
+  text-indent: 1rem;
 }
 
 footer p {
