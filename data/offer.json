@@ -3,18 +3,18 @@
         {
             "file_name": "offer1.jpg",
             "alt": "Dwa monitory komputera stojące na blacie biurka",
-            "title": "Funkcjonalność",
-            "description": "Decydując się na umieszczenie strony internetowej w sieci kierujemy się zawsze jakąś potrzebą. Bez względu na to, czy jest to chęć dotarcia do nowych klientów, zaistnienia z jakimś ciekawym projektem, czy może po prostu chcemy wymienić poglądy z kimś o podobnych zainteresowaniach, zawsze wymagamy, aby nasza strona spełniała nasze oczekiwania. Właściwa funkcjonalność jest najważniejszą rzeczą, na jaką musimy zwrócić uwagę. Nie miałoby większego sensu skupiać się na umieszczeniu ciężkiej i rozbudowanej grafiki na stronie przeznaczonej do czatowania, czy też zakładanie sklepu internetowego ze słabo dopracowanym koszykiem. Rozumiejąc te potrzeby jesteśmy w stanie zapewnić odpowiednią efektywność projektowanej strony internetowej."
+            "title": "Projektowanie",
+            "description": "Za decyzją o postawieniu strony internetowej, czy stworzeniu aplikacji stoi zawsze chęć rozwiązania jakiegoś problemu i jedynie poprzez nasze indywidualne podejście do projektowania jesteśmy w stanie go zrozumieć i dostarczyć odpowiednie rozwiązanie. Tak, jak w przypadku aplikacji, strona musi przede wszystkim spełnić swoją funkcję i nie chodzi tu jedynie o dobór odpowiednich grafik, czy animacji. Są one tylko narzędziem, które wykorzystujemy do osiągnięcia celu jakim może być np. lepsze dotarcie do odbiorcy. Podczas projektowania nie skupiamy się na narzędziach, ale na analizie funkcji, jaką ma pełnić dana strona, czy aplikacja, a dopiero wtedy do tej funkcji dobieramy odpowiednie narzędzia."
         },{
             "file_name": "offer2.jpg",
             "alt": "Ekran komputera z wyświetlonym kodem",
-            "title": "Komunikacja",
-            "description": "Zrozumienie potrzeb osób chcących umieścić w sieci swoją stronę jest niezbędne, aby zapewnić odpowiednią jej funkcjonalność. Komunikacja pomiędzy zleceniodawcą i projektantem strony często bywa utrudniona z uwagi na rożne doświadczenie zawodowe, przez co projektanci nie zawsze rozumieją czego się od nich oczekuje. Wieloletnie doświadczenie w branży technicznej pozwala nam na łatwą komunikację z firmami produkcyjnymi i zajmującymi się handlem technicznym, natomiast otwartość na specyficzne wymagania pozwala na realizację nawet najbardziej nietypowych zleceń."
+            "title": "Pisanie kodu",
+            "description": "Jednym z głównych naszych zadań jest oczywiście pisanie kodu. Skupiamy się przede wszystkim na jego optymalizacji, ponieważ dzięki temu uzyskujemy szybsze czasy ładowania oraz lepszą stabilność aplikacji. Jednocześnie, dbamy też o jego czytelność, aby łatwiej, a co za tym idzie taniej, można było go rozbudowywać w przyszłości dodając nowe funkcjonalności. Dbamy również o tzw. dostępność, czyli wymagania WCAG 2.0, które stają się coraz bardziej istotne i mają coraz większy wpływ na pozycjonowanie stron (SEO)."
         },{
             "file_name": "offer3.jpg",
             "alt": "Smartfon trzymany w ręce",
             "title": "Responsywność",
-            "description": "Urządzenia mobilne bez wątpienia stają się głównym źródłem pozyskiwania informacji. Obecnie obserwujemy próbę uzyskania kompromisu pomiędzy wielkością wyświetlacza, a miniaturyzacją urządzenia. Responsywność, czyli automatyczne dopasowywanie się stron do wielkości ekranu jest tym, czego wymagać musimy od każdej strony internetowej. Mobile First Design zmienia całkowicie sposób projektowania stron, gdzie sama responsywność jest tylko jednym z elementów. Zakładając możliwość korzystania z różnorodnych urządzeń, a właściwe projektując pod te urządzenia strony od podstaw jesteśmy w stanie uzyskać bezkolizyjne ich działanie w przyszłości."
+            "description": "Responsive Web Design (RWD) jest to automatyczne dopasowywanie się stron i aplikacji do wielkości ekranu urządzenia, na którym są one wyświetlane. Dzięki RWD ta sama strona będzie czytelna zarówno na dużym ekranie laptopa lub telewizora, jak i na małym wyświetlaczu tableta, czy smartfona. RWD jest u nas standardem i rezygnujemy z niego jedynie na specjalne życzenie klienta. Ponadto, oferujemy również podeście Mobile First Design, polegające na projektowaniu w pierwszej kolejności na urządzenia mobilne, a następnie rozbudowywaniu widoku na większe wyświetlacze."
         }
     ],
     "textes":{
