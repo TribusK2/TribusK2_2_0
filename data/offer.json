@@ -23,20 +23,25 @@
     },
     "logos":[
         {
-            "file_name": "logo_html.png",
-            "alt": "logo HTML",
-            "title": "HTML",
-            "link": "https://www.w3.org/html/"
+            "file_name": "logo_angular.png",
+            "alt": "logo Angular",
+            "title": "Angular",
+            "link": "https://angular.io/"
         },{
-            "file_name": "logo_css.png",
-            "alt": "logo CSS",
-            "title": "CSS",
-            "link": "https://www.w3.org/Style/CSS/Overview.en.html"
+            "file_name": "logo_rxjs.png",
+            "alt": "logo RxJS",
+            "title": "RxJS",
+            "link": "https://www.rxjs.dev/"
         },{
-            "file_name": "logo_javascript.png",
-            "alt": "logo JavaScript",
-            "title": "JavaScript",
-            "link": "https://www.ecma-international.org/"
+            "file_name": "logo_material.png",
+            "alt": "logo Material",
+            "title": "Material",
+            "link": "https://material.angular.io/"
+        },{
+            "file_name": "logo_bootstrap.png",
+            "alt": "logo Bootstrap",
+            "title": "Bootstrap",
+            "link": "https://getbootstrap.com/"
         },{
             "file_name": "logo_sass.png",
             "alt": "logo SASS",
@@ -48,11 +53,6 @@
             "title": "jQuery",
             "link": "https://jquery.com/"
         },{
-            "file_name": "logo_angularjs.png",
-            "alt": "logo AngularJS",
-            "title": "AngularJS",
-            "link": "https://angularjs.org/"
-        },{
             "file_name": "logo_php.png",
             "alt": "logo PHP",
             "title": "PHP",
@@ -62,6 +62,26 @@
             "alt": "logo MySql",
             "title": "MySql",
             "link": "https://www.mysql.com/"
+        },{
+            "file_name": "logo_nodejs.png",
+            "alt": "logo NodeJS",
+            "title": "NodeJS",
+            "link": "https://nodejs.org/"
+        },{
+            "file_name": "logo_javascript.png",
+            "alt": "logo JavaScript",
+            "title": "JavaScript",
+            "link": "https://www.ecma-international.org/"
+        },{
+            "file_name": "logo_angularjs.png",
+            "alt": "logo AngularJS",
+            "title": "AngularJS",
+            "link": "https://angularjs.org/"
+        },{
+            "file_name": "logo_typescript.png",
+            "alt": "logo TypeScript",
+            "title": "TypeScript",
+            "link": "https://www.typescriptlang.org/"
         }
     ]
 }
