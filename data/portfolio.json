@@ -77,18 +77,46 @@
         ],
         "proj3":[
             {
-                "file_name": "nbpapi01.jpg",
-                "alt": "Dwa monitory komputera stojące na blacie biurka",
-                "title": "Kursy walut NBP",
-                "industry": "Finanse",
-                "web1_link": "",
-                "web1": "",
+                "file_name": "vrapi01.jpg",
+                "alt": "Panel startowy aplikacji Wirtualna Recepcja",
+                "title": "Wirtualna Recepcja",
+                "industry": "Turystyka",
+                "web1_link": "ekoncept.virtualreception.pl",
+                "web1": "ekoncept.virtualreception.pl",
                 "web2_link": "",
                 "web2": "",
-                "second_header": "Aplikacja do odczytu kursu walut NBP.",
-                "description1": "- Projekt graficzny aplikacji.",
-                "description2": "- Opracowanie zakresu pobierania i przetwarzania danych z API NBP.",
-                "description3": "- Realizacja kodu."
+                "second_header": "Aplikacja dla klienta końcowego, do zarządzania rezerwacjami oraz pobytami w hotelu w technologii Angular 2+ (Dane logowania do wersji testowej można uzyskać kontaktując się z firmą Ekoncept: www.ekoncept.pl)",
+                "description1": "- Przebudowa frontendu aplikacji z zastosowaniem prawidłowych wzorców projektowych.",
+                "description2": "- Implementacja nowych elementów aplikacji w oparciu o istniejące API (REST).",
+                "description3": "- Wdrożenie Progressive Web Application."
+            },
+            {
+                "file_name": "pmsapi01.jpg",
+                "alt": "Panel startowy aplikacji Ekoncept Web PMS",
+                "title": "Web PMS",
+                "industry": "Turystyka",
+                "web1_link": "test.ekoncept-pms.pl",
+                "web1": "test.ekoncept-pms.pl",
+                "web2_link": "",
+                "web2": "",
+                "second_header": "Aplikacja do zarządzania hotelem w technologii Angular 2+. (Dane logowania do wersji testowej można uzyskać kontaktując się z firmą Ekoncept: www.ekoncept.pl)",
+                "description1": "- Projekt architektury frontendu aplikacji z zastosowaniem podejścia reaktywnego.",
+                "description2": "- Implementacja poszczególnych elementów aplikacji w oparciu o istniejące API (REST).",
+                "description3": "- Utrzymanie i rozwój aplikacji."
+            },
+            {
+                "file_name": "polmedapi01.jpg",
+                "alt": "Panel startowy aplikacji Medycyna Pracy",
+                "title": "Medycyna Pracy",
+                "industry": "Medycyna",
+                "web1_link": "pmp.polmed.pl",
+                "web1": "pmp.polmed.pl",
+                "web2_link": "",
+                "web2": "",
+                "second_header": "Aplikacja do zarządzania Medycyną Pracy w technologii V-Tiger (PHP). (Dane logowania do wersji testowej można uzyskać kontaktując się z firmą Ekoncept: www.ekoncept.pl)",
+                "description1": "- Implementacja nowych elementów aplikacji w oparciu o istniejące API (SOAP).",
+                "description2": "- Utrzymanie i rozwój aplikacji.",
+                "description3": ""
             }
         ]
     },
