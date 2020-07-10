@@ -13,11 +13,11 @@
             "title": "Wyślij maila na adres biuro@tribusk2.pl",
             "link": "mailto:biuro@tribusk2.pl"
         },{
-            "file_name": "facebook.png",
-            "alt": "Ikona facebooka",
-            "text": "facebok/tribusk2",
-            "title": "Wejdź na stronę facebooka",
-            "link": "http://"
+            "file_name": "github.png",
+            "alt": "Ikona guthub'a",
+            "text": "github.com/tribusk2",
+            "title": "Wejdź na stronę Guthub'a",
+            "link": "https://github.com/TribusK2"
         }
     ],
     "textes":{
